@@ -110,13 +110,13 @@ a {
 
 .btn-primary {
     background-color: #F15C2C;
-    color:#fff;
+    color: #fff;
 }
 
 .btn-shadow {
-    -webkit-box-shadow:  5px 5px 10px #626262;
-    -moz-box-shadow:  5px 5px 10px #626262;
-    box-shadow:  5px 5px 10px #626262;
+    -webkit-box-shadow: 5px 5px 10px #626262;
+    -moz-box-shadow: 5px 5px 10px #626262;
+    box-shadow: 5px 5px 10px #626262;
 }
 
 /*----------------------------------------WRAP--------------------------------------*/
@@ -130,6 +130,11 @@ a {
     width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.text-box {
+    max-width: 650px;
+    width: 100%;
 }
 
 /*-------------------------------------HEADER---------------------------------------*/
@@ -259,7 +264,7 @@ a {
     background-size: cover;
 }
 
-.hero-text-wrap {
+.hero .text-box {
     width: 50%;
     margin-left: auto;
 }
@@ -276,7 +281,7 @@ a {
 
 /*---------------------------------------SECTION---------------------------------------*/
 .section-title {
-    font: 700 60px "GalanoGrotesque", sans-serif;
+    font: 700 60px/1 "GalanoGrotesque", sans-serif;
     margin-bottom: 35px;
 }
 
@@ -303,6 +308,49 @@ a {
 
 .quick-start-section .btn:last-child {
     margin-right: 0;
+}
+
+/*---------------------------------FEATURE-SECTION-----------------------------------*/
+.description-wrap {
+    font: 400 30px "GalanoGrotesque", sans-serif;
+}
+
+.description-wrap p {
+    margin-bottom: 30px;
+}
+
+.feature-section {
+
+    background: url("../img/window-bg.jpg") no-repeat right bottom;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-bottom: 3px solid #fff;
+
+    -webkit-box-shadow: 0 0 20px #434343;
+    -moz-box-shadow: 0 0 20px #434343;
+    box-shadow: 0 0 20px #434343;
+
+    padding: 180px 0 300px;
+    margin-bottom: 5px;
+}
+
+.partnership-section {
+    background: url("../img/panel-bg.jpg") repeat-x center;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+}
+
+.partnership-section .container {
+    display: flex;
+    align-items: center;
+}
+
+.partnership-section .img-wrap {
+    padding-right: 55px;
+}
+
+.partnership-section .description-wrap {
+    padding: 45px 0;
 }
 
 /*-------------------------------------FOOTER---------------------------------------*/
