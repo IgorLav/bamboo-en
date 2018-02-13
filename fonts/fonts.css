@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-Regular.eot?#iefix') format('embedded-opentype'),  url('GalanoGrotesque-Regular.woff') format('woff'), url('GalanoGrotesque-Regular.ttf')  format('truetype'), url('GalanoGrotesque-Regular.svg#GalanoGrotesque-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('GalanoGrotesque-Bold.eot?#iefix') format('embedded-opentype'),  url('GalanoGrotesque-Bold.otf')  format('opentype'),
+	     url('GalanoGrotesque-Bold.woff') format('woff'), url('GalanoGrotesque-Bold.ttf')  format('truetype'), url('GalanoGrotesque-Bold.svg#GalanoGrotesque-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
