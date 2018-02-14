@@ -1,4 +1,109 @@
+@media all and (max-width: 1200px){
+    .container {
+        width: 980px;
+    }
+
+    .logo  {
+        max-width: 200px;
+    }
+
+    /*QUICK START SECTION*/
+    .quick-start-section .btn {
+        font-size: 38px;
+    }
+}
+
+@media all and (max-width: 980px){
+    .container {
+        width: 760px;
+    }
+
+    .burger-btn,
+    .mob-nav-close {
+        display: block !important;
+    }
+
+    .header .nav-wrap {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+
+        opacity: 0;
+
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+
+        max-height: 100%;
+        background-color: rgba(65, 65, 66, 0.76);
+        padding: 10% 0;
+
+        overflow: auto;
+        z-index: 9999;
+    }
+
+    .header .nav-wrap.active {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .header .secondary-nav {
+        position: relative;
+    }
+
+    .secondary-nav .container {
+        padding: 0;
+    }
+
+    .header .nav-wrap li {
+        display: block;
+        text-align: center;
+        margin: 0 0 30px;
+    }
+
+    .header .nav-wrap a {
+        color: #fff;
+        font-size: 30px;
+    }
+
+        /*QUICK START SECTION*/
+    .quick-start-section .btns-wrap {
+        display: block;
+    }
+
+    .quick-start-section .btn{
+        display: block;
+        max-width: 427px;
+        width: 100%;
+        margin: 0 auto 23px;
+    }
+
+    .quick-start-section .btn:last-child {
+        margin: 0 auto;
+    }
+}
+
+
+
 @media all and (max-width: 767px){
-	
+
 }
 

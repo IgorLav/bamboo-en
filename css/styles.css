@@ -157,7 +157,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    padding-bottom: 35px;
+    padding: 35px 0;
 
     -webkit-transition: .4s;
     -moz-transition: .4s;
@@ -172,7 +172,7 @@ a {
     background: #fff;
 }
 
-.header .container {
+.header > .container {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
@@ -183,7 +183,7 @@ a {
     max-width: 285px;
 }
 
-.header .main-nav {
+.header .nav-wrap {
     flex-grow: 1;
     text-align: right;
 }
@@ -191,6 +191,7 @@ a {
 .main-nav-item {
     display: inline-block;
     margin-right: 30px;
+    vertical-align: bottom;
 }
 
 .main-nav-item:last-child {
@@ -201,6 +202,7 @@ a {
     position: relative;
     display: inline-block;
     font: 700 18px "Lato", sans-serif;
+    vertical-align: bottom;
 }
 
 .main-nav-item a:after {
@@ -242,9 +244,13 @@ a {
 }
 
 .secondary-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
     text-align: right;
     padding: 15px 0 7px;
+    z-index: 1;
 }
 
 .secondary-nav-item {
@@ -302,20 +308,46 @@ a {
     padding: 5px;
 }
 
-.burger-btn {
-    position: fixed;
+.burger-btn,
+.mob-nav-close {
     right: 0;
     top: 0;
     width: 60px;
     height: 60px;
 
-    background: #414142 url("../img/burger.svg") no-repeat center;
-    border: none;
-    display: none;
-
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    display: none;
+    border: none;
+}
+
+.burger-btn {
+    position: fixed;
+    background: #414142 url("../img/burger.svg") no-repeat center;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+    transition: transform .4s;
+
+    z-index: 1000;
+}
+
+.burger-btn.active {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.mob-nav-close {
+    position: absolute;
+    background: url("../img/cancel.svg") no-repeat center;
+    -webkit-background-size: 29px;
+    background-size: 29px;
     z-index: 1000;
 }
 

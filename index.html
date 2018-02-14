@@ -4,6 +4,10 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bamboo Insurance</title>
+        <!--favicons-->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16" />
 
         <!-- fonts -->
         <link rel="stylesheet" href="fonts/fonts.css">
@@ -19,35 +23,15 @@
     <body>
         <div class="wrap">
             <header class="header">
-                <div class="top-header">
-                    <div class="container">
-                        <nav class="secondary-nav">
-                            <ul class="secondary-nav-list">
-                                <li class="secondary-nav-item">
-                                    <a href="#">Agent login</a>
-                                </li>
-                                <li class="secondary-nav-item">
-                                    <a href="#">Customer login</a>
-                                </li>
-                                <li class="secondary-nav-item dropdown">
-                                    <a href="#">Language <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                <div class="container">
+                    <button type="button" class="burger-btn" id="burgerBtn"></button>
 
-                <div class="bottom-header">
-                    <div class="container">
-                        <button type="button" class="burger-btn" id="burgerBtn"></button>
+                    <a href="/" class="logo">
+                        <img class="img-fluid" src="img/logo.svg" alt="">
+                    </a>
 
-                        <a href="/" class="logo">
-                            <img class="img-fluid" src="img/logo.svg" alt="">
-                        </a>
+                    <div class="nav-wrap">
+                        <button class="mob-nav-close" type="button"></button>
 
                         <nav class="main-nav">
                             <ul class="main-nav-list">
@@ -57,6 +41,25 @@
                                 <li class="main-nav-item"><a href="#" class="main-nav-link">Contact</a></li>
                                 <li class="main-nav-item"><a href="#" class="main-nav-link">Find An Agent</a></li>
                             </ul>
+                        </nav>
+                        <nav class="secondary-nav">
+                            <div class="container">
+                                <ul class="secondary-nav-list">
+                                    <li class="secondary-nav-item">
+                                        <a href="#">Agent login</a>
+                                    </li>
+                                    <li class="secondary-nav-item">
+                                        <a href="#">Customer login</a>
+                                    </li>
+                                    <li class="secondary-nav-item dropdown">
+                                        <a href="#">Language <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">Spanish</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -116,7 +119,7 @@
                         <div class="text-box">
                             <h3 class="offer-title">homeowners</h3>
                             <p class="offer-sub-text">Your home is your base camp; <br> we’ll help you safeguard it.</p>
-                            <p>Our comprehensive home coverage & around-the-clock customer service mean you’re always
+                            <p>Our comprehensive home coverage & around-the-clock customer service mean you’re always
                                 supported.
                             </p>
                             <a href="#" class="btn btn-default">Find out more</a>
