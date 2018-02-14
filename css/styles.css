@@ -127,6 +127,14 @@ a {
 .wrap {
     position: relative;
     overflow: hidden;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1 0 auto;
+    width: 100%;
 }
 
 .container {
@@ -489,6 +497,7 @@ a {
 /*-------------------------------------FOOTER---------------------------------------*/
 
 .footer {
+    margin-top: auto;
     padding: 53px 0 60px;
     color: #fff;
 }
@@ -525,4 +534,77 @@ a {
 
 .social-nav .social-link:last-child {
     margin-right: 0;
+}
+
+
+/*SECONDARY*/
+
+.page-banner {
+    display: table;
+    height: 400px;
+    width: 100%;
+    padding: 120px 0 100px;
+
+    background-repeat: no-repeat;
+    background-position: center right;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.page-banner .text-wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.page-banner  .banner-title {
+    font: 700 72px/1 "GalanoGrotesque", sans-serif;
+}
+
+.page-tabs-nav{
+    display: flex;
+    width: 100%;
+    border: 1px solid #B0B0B0;
+}
+
+.page-tabs-nav .tabs-nav-link {
+    font: 700 24px/1 'GalanoGrotesque', sans-serif;
+    flex-grow: 1;
+    border-right: 1px solid #B0B0B0;
+    padding: 20px 0 30px;
+    text-align: center;
+
+    color: #B0B0B0;
+}
+
+.page-tabs-nav .tabs-nav-link.active {
+    border-bottom: 4px solid #F15C2C;
+}
+
+.page-tabs-nav .tabs-nav-link:hover,
+.page-tabs-nav .tabs-nav-link:focus,
+.page-tabs-nav .tabs-nav-link.active {
+    color: #F15C2C;
+}
+
+.page-tabs-nav .tabs-nav-link:last-child {
+    border-right: none;
+}
+
+.page-content {
+    font: 28px "GalanoGrotesque", sans-serif;
+    padding: 80px 0 150px;
+}
+
+.page-content-title {
+    font: 700 60px/1 "GalanoGrotesque", sans-serif;
+    margin-bottom: 35px;
+}
+
+.page-content p {
+    margin-bottom: 50px;
+}
+
+.page-content h3 {
+    font: 700 48px/1 "GalanoGrotesque", sans-serif;
+    margin-bottom: 35px;
 }

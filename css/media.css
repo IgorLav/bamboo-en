@@ -18,6 +18,10 @@
         width: 760px;
     }
 
+    .header {
+        padding: 12px 0;
+    }
+
     .burger-btn,
     .mob-nav-close {
         display: block !important;
