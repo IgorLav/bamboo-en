@@ -45,12 +45,17 @@ $(document).ready(function () {
                 }, {
                     offset: "80%"
                 });
+
+                if(inEffect === 'play') {
+                    $('.video-anim video').get(0).play();
+                }
             };
         })($);
 
         $(".fromLeft").animated("fadeInLeft");
         $(".fromRight").animated("fadeInRight");
         $(".fromDown").animated("fadeInUp");
+        $(".video-anim").animated("play");
     }
 
     if($.waypoints) {

@@ -598,16 +598,27 @@ a {
 }
 
 .feature-section {
-    background: url("../img/window-bg.jpg") no-repeat right bottom;
+    position: relative;
+    /*background: url("../img/window-bg.jpg") no-repeat right bottom;*/
+    background-color: #ebeaeb;
     background-size: cover;
-    border-bottom: 3px solid #fff;
-
-    -webkit-box-shadow: 0 0 20px #434343;
-    box-shadow: 0 0 20px #434343;
-
-    padding: 185px 0 360px;
-    margin-bottom: 5px;
+    padding: 185px 0 195px;
 }
+
+.feature-section video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1600px;
+    height: auto;
+    z-index: 1;
+}
+
+.feature-section .container {
+    position: relative;
+    z-index: 2;
+}
+
 
 .partnership-section {
     background: url("../img/panel-bg.jpg") repeat-x center;

@@ -33,6 +33,10 @@
     .logo {
         max-width: 240px;
     }
+
+    .feature-section video {
+        width: 1400px;
+    }
 }
 
 @media all and (max-width: 1220px) {
@@ -231,8 +235,16 @@
     /*------------------------------------FEATURE------------------------------------*/
     .feature-section {
         background: none;
-        padding-top: 100px;
+        padding-top: 0;
         padding-bottom: 40px;
+    }
+
+    .feature-section .video-anim {
+        direction: rtl;
+    }
+
+    .feature-section video {
+        position: relative;
     }
 
     /*------------------------------PARTNERSHIP SECTION------------------------------*/
@@ -315,6 +327,10 @@
         min-width: 1300px;
         top: 60%;
     }
+
+    .feature-section .description-wrap {
+        padding-top: 60px;
+    }
 }
 
 @media all and (max-width: 767px) {
@@ -376,7 +392,7 @@
 
     /*FEATURE SECTION*/
     .feature-section {
-        padding-top: 70px;
+        /*padding-top: 70px;*/
     }
 
     /*OFFER SECTION*/
