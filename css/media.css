@@ -309,7 +309,7 @@
 
     .page-tabs-nav .tabs-nav-link {
         font-size: 20px;
-        padding: 15px 0 20px;
+        padding: 15px 5px 20px;
     }
 
     .small-clouds {
@@ -335,7 +335,7 @@
 
     .page-tabs-nav .tabs-nav-link {
         font-size: 18px;
-        padding: 10px 0 15px;
+        padding: 10px 5px 15px;
     }
 }
 

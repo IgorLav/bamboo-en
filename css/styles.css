@@ -884,7 +884,7 @@ body:not(.home) .header {
     -ms-flex-positive: 1;
     flex-grow: 1;
     border-right: 1px solid #B0B0B0;
-    padding: 20px 0 30px;
+    padding: 20px 5px 30px;
     text-align: center;
     border-bottom: 4px solid transparent;
     color: #B0B0B0;
