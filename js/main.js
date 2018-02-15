@@ -26,11 +26,9 @@ $(document).ready(function () {
     var stickyNav = $('.header');
     var introSectionHeight = $('.intro-section');
 
-    var setOffset =  function(){ return  1;}
-
     stickyNav.affix({
         offset: {
-            top: setOffset()
+            top: 10
         }
     });
 
@@ -50,11 +48,12 @@ $(document).ready(function () {
             };
         })($);
 
-        $(".feature-section .description-wrap, .partnership-section .img-wrap img").animated("fadeInLeft");
-        $(".hero .text-box, .partnership-section .description-wrap").animated("fadeInRight");
+        $(".fromLeft").animated("fadeInLeft");
+        $(".fromRight").animated("fadeInRight");
+        $(".fromDown").animated("fadeInUp");
     }
 
-    if(window.waypoints) {
+    if($.waypoints) {
         sectionAnim();
     }
 
@@ -68,6 +67,4 @@ $(document).ready(function () {
         $(this).addClass('active');
             $(tabId).fadeIn(600).addClass('active');
     });
-
-
 });

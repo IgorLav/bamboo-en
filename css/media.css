@@ -1,3 +1,9 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .offer-section .compound-bg {
+        top: 34%; /*IE 11 bg position hard fix*/
+    }
+}
+
 @media all and (min-width: 1620px) {
     .hero-title {
         font-size: 90px;
@@ -43,9 +49,14 @@
         font-size: 38px;
     }
 
+    /*OFFER SECTION*/
     .offer-section .houses {
         left: 31.5%;
         height: 45%;
+    }
+
+    .small-clouds {
+        left: 60%;
     }
 }
 
@@ -86,11 +97,13 @@
         text-align: center;
 
         -webkit-transform: scale(0);
+        -ms-transform: scale(0);
         transform: scale(0);
 
         opacity: 0;
 
         -webkit-transition: .5s;
+        -o-transition: .5s;
         transition: .5s;
 
         max-height: 100%;
@@ -103,6 +116,7 @@
 
     .header .nav-wrap.active {
         -webkit-transform: scale(1);
+        -ms-transform: scale(1);
         transform: scale(1);
         opacity: 1;
     }
@@ -159,6 +173,7 @@
     }
 
     .footer .top-footer {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
@@ -236,7 +251,6 @@
         padding: 80px 0 100px;
 
         background: url("../img/panel-bg.jpg") repeat-x center;
-        -webkit-background-size: auto 100%;
         background-size: auto 100%;
     }
 
@@ -257,6 +271,7 @@
 
     .offer-section .text-box.right-box {
         -webkit-transform: none;
+        -ms-transform: none;
         transform: none;
     }
 
@@ -294,6 +309,11 @@
     .page-tabs-nav .tabs-nav-link {
         font-size: 20px;
         padding: 15px 0 20px;
+    }
+
+    .small-clouds {
+        min-width: 1300px;
+        top: 60%;
     }
 }
 
@@ -418,7 +438,10 @@
     }
 
     .footer .top-footer {
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
 
@@ -493,6 +516,14 @@
         width: 100%;
     }
 
+    .offer-section .offer-title {
+        font-size: 26px;
+    }
+
+    .small-clouds {
+        display: none;
+    }
+
     .offer-section .houses {
         height: 160px;
     }
@@ -502,4 +533,3 @@
         font-size: 28px;
     }
 }
-
