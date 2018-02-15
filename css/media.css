@@ -123,6 +123,7 @@
 
     .header .secondary-nav {
         position: relative;
+        display: block !important;
     }
 
     .secondary-nav .container {

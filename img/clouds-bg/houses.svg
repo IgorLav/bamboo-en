@@ -4,9 +4,9 @@
 	 viewBox="0 0 677.6 407.5" style="enable-background:new 0 0 677.6 407.5;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st1{fill:#BDBEC0;}
-	.grey-house:hover .st1 { fill:#F15C2C; transition: .5s}
-	.st2{fill:#F15C2C; transition: .5s}
+	.st1{fill:#BDBEC0; transition: .5s}
+	.grey-house:hover .st1 { fill:#F15C2C; }
+	.st2{fill:#F15C2C; transition: 1.5s}
 	.orange-house:hover .st2{fill:#BDBEC0;}
 </style>
 <g class="grey-house">
