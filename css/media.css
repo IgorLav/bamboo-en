@@ -1,23 +1,12 @@
-@media all and (max-width: 1370px){
-    .header {
-        padding: 25px 0;
-    }
-
-    .logo {
-        max-width: 240px;
-    }
-
-    .hero {
-        height: 900px;
-    }
-
-    .hero .container {
-        width: 100%;
-        padding: 0;
-    }
-
+@media all and (min-width: 1620px) {
     .hero-title {
-        font-size: 80px;
+        font-size: 90px;
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .hero {
+        background-position: 50% top;
     }
 
     /*-------------------PARTNERSHIP-------------------*/
@@ -26,12 +15,26 @@
     }
 }
 
-@media all and (max-width: 1220px){
+@media all and (max-width: 1370px) {
+    .header {
+        padding: 25px 0;
+    }
+
+    .header .main-nav {
+        padding-top: 20px;
+    }
+
+    .logo {
+        max-width: 240px;
+    }
+}
+
+@media all and (max-width: 1220px) {
     .container {
         width: 980px;
     }
 
-    .logo  {
+    .logo {
         max-width: 200px;
     }
 
@@ -39,15 +42,20 @@
     .quick-start-section .btn {
         font-size: 38px;
     }
+
+    .offer-section .houses {
+        left: 31.5%;
+        height: 45%;
+    }
 }
 
-@media all and (max-width: 980px){
+@media all and (max-width: 980px) {
     .text-box {
         max-width: none;
     }
 
     .container,
-    .container-mob{
+    .container-mob {
         width: 690px;
         margin: 0 auto;
         padding: 0 15px;
@@ -75,9 +83,7 @@
         bottom: 0;
         right: 0;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        text-align: center;
 
         -webkit-transform: scale(0);
         transform: scale(0);
@@ -88,8 +94,8 @@
         transition: .5s;
 
         max-height: 100%;
-        background-color: rgba(65, 65, 66, 0.76);
-        padding: 10% 0;
+        background-color: rgba(65, 65, 66, 0.95);
+        padding: 20% 0 10%;
 
         overflow-x: auto;
         z-index: 9999;
@@ -97,9 +103,6 @@
 
     .header .nav-wrap.active {
         -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
         transform: scale(1);
         opacity: 1;
     }
@@ -110,6 +113,29 @@
 
     .secondary-nav .container {
         padding: 0;
+    }
+
+    .secondary-nav .caret {
+        border-top-color: #fff;
+    }
+
+    .header .dropdown .dropdown-menu {
+        display: none;
+        background-color: transparent;
+        border: none;
+        padding-top: 15px;
+    }
+
+    .header .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .header .dropdown:hover .dropdown-menu li {
+        margin-bottom: 0;
+    }
+
+    .header .dropdown-menu li {
+        padding: 10px;
     }
 
     .header .nav-wrap li {
@@ -128,6 +154,10 @@
         text-transform: none;
     }
 
+    .footer {
+        padding-bottom: 35px;
+    }
+
     .footer .top-footer {
         flex-wrap: wrap;
     }
@@ -137,28 +167,30 @@
         margin-bottom: 20px;
     }
 
-        /*------------------------------------------HERO------------------------------------------*/
+    /*------------------------------------------HERO------------------------------------------*/
     .hero {
         height: 836px;
-        padding-top: 135px;
-    }
-
-    .hero .text-box {
-        width: 380px;
+        padding-top: 125px;
+        background-position: 45% top;
     }
 
     .hero-title {
         font-size: 60px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
-/*------------------------------------QUICK START SECTION------------------------------------*/
+    .hero .btn {
+        font-size: 18px;
+        max-width: 188px;
+    }
+
+    /*------------------------------------QUICK START SECTION------------------------------------*/
     .quick-start-section {
         padding: 25px 0 65px;
     }
 
     .quick-start-section .section-title {
-        font-size: 46px;
+        font-size: 45px;
         margin-bottom: 33px;
     }
 
@@ -170,11 +202,11 @@
         padding-bottom: 25px;
     }
 
-    .quick-start-section .btn{
+    .quick-start-section .btn {
         display: block;
         max-width: 427px;
         width: 100%;
-        margin: 0 auto 23px;
+        margin: 0 auto 20px;
     }
 
     .quick-start-section .btn:last-child {
@@ -184,11 +216,11 @@
     /*------------------------------------FEATURE------------------------------------*/
     .feature-section {
         background: none;
-        padding-top: 110px;
+        padding-top: 100px;
         padding-bottom: 40px;
     }
 
-    /*PARTNERSHIP SECTION*/
+    /*------------------------------PARTNERSHIP SECTION------------------------------*/
     .partnership-section {
         background: none;
     }
@@ -216,29 +248,174 @@
         max-height: none;
         width: 100%;
     }
-    
-    /*OFFER SECTION*/
+
+    /*------------------------------------OFFER SECTION------------------------------------*/
+    .offer-section {
+        padding-top: 70px;
+        margin-bottom: 50px;
+    }
 
     .offer-section .text-box.right-box {
         -webkit-transform: none;
         transform: none;
     }
+
+    .offer-section .text-row.mob-bg {
+        position: relative;
+        padding-bottom: 340px;
+    }
+
+    .offer-section .compound-bg {
+        top: 0;
+    }
+
+    .offer-section .houses {
+        height: 410px;
+        left: 50%;
+    }
+
+    .offer-section .right-box {
+        padding: 50px 0 0;
+    }
+
+    .mob-bg-white {
+        background-color: #fff !important;
+    }
+
+    .page-banner .banner-title {
+        font-size: 65px;
+    }
+
+    .page-content {
+        font-size: 24px;
+        padding-top: 60px;
+    }
+
+    .page-tabs-nav .tabs-nav-link {
+        font-size: 20px;
+        padding: 15px 0 20px;
+    }
 }
 
+@media all and (max-width: 767px) {
+    .container-mob,
+    .container {
+        width: 100%;
+        padding: 0 30px;
+    }
 
+    .hero-title {
+        font-size: 52px;
+    }
 
-@media all and (max-width: 767px){
-   .container,
-    .container-mob {
-       width: 480px;
-   }
+    .quick-start-section .btn {
+        padding-bottom: 20px;
+    }
+
+    .page-tabs-nav .tabs-nav-link {
+        font-size: 18px;
+        padding: 10px 0 15px;
+    }
 }
 
-@media all and (max-width: 480px){
-   .container-mob,
-   .container {
-       width: 100%;
-   }
+@media all and (max-width: 640px) {
+    .btn-lg {
+        font-size: 22px;
+    }
+
+    .hero {
+        height: 660px;
+        padding-top: 90px;
+    }
+
+    .hero .container {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 39px;
+    }
+
+    .section-title,
+    .page-content-title {
+        font-size: 45px;
+    }
+
+    .quick-start-section .section-title {
+        font-size: 30px;
+    }
+
+    .quick-start-section .btn {
+        font-size: 24px;
+        max-width: 285px;
+    }
+
+    .description-wrap {
+        font-size: 27px;
+    }
+
+    /*FEATURE SECTION*/
+    .feature-section {
+        padding-top: 70px;
+    }
+
+    /*OFFER SECTION*/
+    .offer-section .offer-title {
+        font-size: 36px;
+    }
+
+    .offer-section .offer-sub-text {
+        font-size: 18px;
+    }
+
+    .offer-section .text-box {
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    .offer-section .text-row.mob-bg {
+        padding-bottom: 160px;
+    }
+
+    .offer-section .houses {
+        height: 200px;
+    }
+
+    .offer-section .text-box.right-box {
+        padding-left: 0;
+    }
+
+    /*SECONDARY PAGE*/
+    .page-banner .banner-title {
+        font-size: 55px;
+    }
+
+    .page-content h3 {
+        font-size: 38px;
+    }
+
+    .page-content {
+        font-size: 22px;
+        padding: 50px 0 80px;
+    }
+
+    .page-content p {
+        margin-bottom: 40px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .header .nav-wrap {
+        padding-top: 100px;
+    }
+
+    .header .nav-wrap a {
+        font-size: 22px;
+    }
+
+    .hero {
+        height: 555px;
+    }
 
     .footer .top-footer {
         flex-wrap: nowrap;
@@ -247,7 +424,7 @@
 
     .footer .main-nav {
         width: auto;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 
     .footer .main-nav-item {
@@ -259,6 +436,70 @@
         display: block;
         padding-top: 10px;
     }
+
+    /*SECONDARY PAGE*/
+    .page-banner .banner-title {
+        font-size: 44px;
+    }
+
+    .page-content {
+        font-size: 18px;
+    }
+
+    .page-tabs-nav .tabs-nav-link {
+        font-size: 16px;
+    }
 }
 
+@media all and (max-width: 390px) {
+    .container,
+    .container-mob {
+        padding: 0 20px;
+    }
+
+    .wrap .btn {
+        font-size: 16px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .quick-start-section .btn {
+        font-size: 20px;
+    }
+
+    .page-content-title,
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    .description-wrap {
+        font-size: 18px;
+    }
+
+    .partnership-section .description-wrap {
+        margin-bottom: 25px;
+    }
+
+    /*OFFER SECTION*/
+    .offer-section .text-box {
+        width: 100%;
+    }
+
+    .offer-section .houses {
+        height: 160px;
+    }
+
+    /*SECONDARY */
+    .page-content h3 {
+        font-size: 28px;
+    }
+}
 

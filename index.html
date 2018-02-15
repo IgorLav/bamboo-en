@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="css/media.css">
     </head>
 
-    <body>
+    <body class="home">
         <div class="wrap">
             <header class="header">
                 <div class="container">
@@ -75,7 +75,7 @@
                     <div class="container">
                         <div class="text-box">
                             <h1 class="hero-title">
-                                <span class="text-primary">Bamboo Insurance.</span> <br>
+                                <span class="text-primary">Bamboo <br> Insurance.</span> <br>
                                 Let us grow together.
                             </h1>
                             <a href="secondary.html" class="btn btn-default btn-shadow">learn more</a>
@@ -124,16 +124,19 @@
                 </section>
 
                 <section class="offer-section">
-                    <div class="compound-bg">
-                        <div class="small-clouds"></div>
-                        <object data="img/clouds-bg/big-clouds.svg"  type="image/svg+xml" class="big-clouds"></object>
-                        <object data="img/clouds-bg/houses.svg"  type="image/svg+xml" class="houses"></object>
-                    </div>
-
                     <div class="container">
                         <h2 class="section-title text-center">what we offer</h2>
+                    </div>
 
-                        <div class="text-row">
+                    <div class="text-row mob-bg">
+                        <div class="compound-bg">
+                            <div class="small-clouds"></div>
+                            <object data="img/clouds-bg/big-clouds.svg" type="image/svg+xml"
+                                    class="big-clouds"></object>
+                        </div>
+                        <object data="img/clouds-bg/houses.svg" type="image/svg+xml" class="houses"></object>
+
+                        <div class="container">
                             <div class="text-box">
                                 <h3 class="offer-title">homeowners</h3>
                                 <p class="offer-sub-text">
@@ -145,8 +148,10 @@
                                 <a href="#" class="btn btn-default">find out more</a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="text-row negative-up">
+                    <div class="text-row mob-bg-white">
+                        <div class="container">
                             <div class="text-box right-box">
                                 <h3 class="offer-title text-primary">dwelling fire</h3>
                                 <p class="offer-sub-text">Bamboo will be there when <br> the unexpected happens</p>
@@ -159,8 +164,9 @@
                     </div>
                 </section>
             </main>
+        </div>
 
-            <footer class="footer bg-secondary">
+        <footer class="footer bg-secondary">
                 <div class="container">
                     <div class="top-footer clearfix">
                         <nav class="main-nav">
@@ -199,7 +205,6 @@
                     </div>
                 </div>
             </footer>
-        </div>
 
 
         <script src="js/jquery-1.11.3.min.js"></script>
