@@ -207,15 +207,11 @@
 
     .quick-start-section .section-title {
         font-size: 45px;
-        margin-bottom: 33px;
+        margin-bottom: 25px;
     }
 
     .quick-start-section .btns-wrap {
         display: block;
-    }
-
-    .quick-start-section .btn {
-        padding-bottom: 25px;
     }
 
     .quick-start-section .btn {
@@ -309,7 +305,7 @@
 
     .page-tabs-nav .tabs-nav-link {
         font-size: 20px;
-        padding: 15px 5px 20px;
+        padding: 18px 5px 20px;
     }
 
     .small-clouds {
@@ -329,13 +325,9 @@
         font-size: 52px;
     }
 
-    .quick-start-section .btn {
-        padding-bottom: 20px;
-    }
-
     .page-tabs-nav .tabs-nav-link {
         font-size: 18px;
-        padding: 10px 5px 15px;
+        padding: 12px 5px 10px;
     }
 }
 

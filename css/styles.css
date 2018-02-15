@@ -103,7 +103,7 @@ a {
 .btn {
     display: inline-block;
     font: 700 24px/1.5 "GalanoGrotesque", sans-serif;
-    padding: 8px 30px 15px;
+    padding: 7px 30px 7px;
     text-align: center;
 
     -webkit-transform: translateZ(0);
@@ -111,7 +111,7 @@ a {
 }
 
 .btn-lg {
-    padding: 10px 50px 20px;
+    padding: 9px 50px;
     font-size: 29px;
 }
 
@@ -577,7 +577,7 @@ a {
 /*---------------------------------------SECTION---------------------------------------*/
 .section-title {
     font: 700 60px/1.12 "GalanoGrotesque", sans-serif;
-    margin-bottom: 31px;
+    margin-bottom: 25px;
 }
 
 /*-----------------------------------QUICK-START-------------------------------------*/
@@ -600,8 +600,7 @@ a {
     width: 50%;
     font-size: 50px;
     margin-right: 30px;
-    padding-top: 15px;
-    padding-bottom: 38px;
+    padding: 14px 15px;
 }
 
 .quick-start-section .btn:last-child {
@@ -879,7 +878,7 @@ a {
     -ms-flex-positive: 1;
     flex-grow: 1;
     border-right: 1px solid #B0B0B0;
-    padding: 20px 5px 30px;
+    padding: 25px 5px 23px;
     text-align: center;
     border-bottom: 4px solid transparent;
     color: #B0B0B0;
