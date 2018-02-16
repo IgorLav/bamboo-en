@@ -746,7 +746,7 @@ a {
     position: absolute;
     top: -50px;
     left: 50%;
-    min-width: 1420px;
+    min-width: 1920px;
     -webkit-animation: 1.5s bigClouds linear infinite;
     animation: 1.5s bigClouds linear infinite;
     background-size: 100%;
@@ -859,6 +859,7 @@ a {
 }
 
 .svg-container svg {
+    display: block;
     width: auto;
     height: 100%;
 }
