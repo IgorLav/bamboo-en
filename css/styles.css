@@ -850,10 +850,11 @@ a {
     height: 54%;
     width: auto;
     max-height: 400px;
-    bottom: 0;
-    right: 52%;
+    bottom: -5px;
+    right: 53%;
 
     -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     transform: translateX(100%);
     z-index: 5;
 }

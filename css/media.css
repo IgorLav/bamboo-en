@@ -1,14 +1,10 @@
 @media all and (min-width: 1620px) {
     .hero-title {
-        font-size: 90px;
+        font-size: 102px;
     }
 }
 
 @media all and (max-width: 1450px) {
-    .hero {
-        /*background-position: 50% top;*/
-    }
-
     /*-------------------PARTNERSHIP-------------------*/
     .partnership-section .img-wrap img {
         width: 120%;
@@ -44,13 +40,12 @@
     }
 
     /*OFFER SECTION*/
-
     .offer-section .tall-house {
         height: 45%;
         right: 60%;
     }
 
-    .offer-section .sm-house{
+    .offer-section .sm-house {
         height: 29%;
         left: 36%;
     }
@@ -320,7 +315,6 @@
     }
 
     /*secondary*/
-
     .page-banner .banner-title {
         font-size: 65px;
     }
@@ -341,7 +335,7 @@
 
     .page-content ul,
     .page-content ol {
-        padding-left:40px;
+        padding-left: 40px;
     }
 
     .page-content li {
@@ -532,7 +526,7 @@
 
     .page-content ul,
     .page-content ol {
-        padding-left:15px;
+        padding-left: 15px;
         padding-bottom: 0;
     }
 }
@@ -591,12 +585,7 @@
         display: none;
     }
 
-    /*.offer-section .houses {*/
-        /*height: 160px;*/
-    /*}*/
-
     /*SECONDARY */
-
     .page-content h1,
     .page-content h2,
     .page-content h3 {
@@ -614,5 +603,42 @@
 
     .page-content blockquote {
         padding-left: 25px;
+    }
+}
+
+
+/*IE 11 house position hardcode fix*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .offer-section .sm-house {
+        bottom: -24px;
+    }
+
+    .offer-section .tall-house {
+        right: 55%;
+    }
+
+
+}
+@media all and (max-width: 1220px) and (-ms-high-contrast: none) {
+    .offer-section .sm-house {
+        bottom: 0;
+    }
+}
+
+@media all and (max-width: 980px) and (-ms-high-contrast: none) {
+    .offer-section .sm-house {
+        bottom: -35px;
+    }
+}
+
+@media all and (max-width: 640px) and (-ms-high-contrast: none) {
+    .offer-section .sm-house {
+        bottom: 0;
+    }
+
+    .offer-section .tall-house {
+        right: 0;
+        left: 30%;
     }
 }
