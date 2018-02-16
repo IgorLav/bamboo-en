@@ -87,6 +87,10 @@
         display: block !important;
     }
 
+    .header:before {
+        height: 168px;
+    }
+
     .header .nav-wrap {
         position: fixed;
         top: 0;
@@ -294,6 +298,13 @@
         background-color: #fff !important;
     }
 
+    .small-clouds {
+        min-width: 1300px;
+        top: 60%;
+    }
+
+    /*secondary*/
+
     .page-banner .banner-title {
         font-size: 65px;
     }
@@ -308,9 +319,21 @@
         padding: 18px 5px 20px;
     }
 
-    .small-clouds {
-        min-width: 1300px;
-        top: 60%;
+    .page-content p {
+        margin-bottom: 40px;
+    }
+
+    .page-content ul,
+    .page-content ol {
+        padding-left:40px;
+    }
+
+    .page-content li {
+        margin-bottom: 30px;
+    }
+
+    .page-content blockquote {
+        padding-left: 50px;
     }
 }
 
@@ -403,21 +426,41 @@
         font-size: 55px;
     }
 
+    .page-content h1,
+    .page-content h2,
     .page-content h3 {
         font-size: 38px;
+    }
+
+    .page-content h4 {
+        font-size: 32px;
+    }
+
+    .page-content h5 {
+        font-size: 26px;
+    }
+
+    .page-content h6 {
+        font-size: 24px;
+    }
+
+    .page-content h4,
+    .page-content h5,
+    .page-content h6 {
+        margin-bottom: 15px;
     }
 
     .page-content {
         font-size: 22px;
         padding: 50px 0 80px;
     }
-
-    .page-content p {
-        margin-bottom: 40px;
-    }
 }
 
 @media all and (max-width: 480px) {
+    .header:before {
+        height: 112px;
+    }
+
     .header .nav-wrap {
         padding-top: 100px;
     }
@@ -464,6 +507,12 @@
 
     .page-tabs-nav .tabs-nav-link {
         font-size: 16px;
+    }
+
+    .page-content ul,
+    .page-content ol {
+        padding-left:15px;
+        padding-bottom: 0;
     }
 }
 
@@ -526,7 +575,23 @@
     }
 
     /*SECONDARY */
+
+    .page-content h1,
+    .page-content h2,
     .page-content h3 {
         font-size: 28px;
+    }
+
+    .page-content h4 {
+        font-size: 24px;
+    }
+
+    .page-content h5,
+    .page-content h6 {
+        font-size: 20px;
+    }
+
+    .page-content blockquote {
+        padding-left: 25px;
     }
 }
