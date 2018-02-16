@@ -955,6 +955,7 @@ a {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+
     border-right: 1px solid #B0B0B0;
     padding: 25px 5px 23px;
     text-align: center;
@@ -963,7 +964,7 @@ a {
 }
 
 .page-tabs-nav .tabs-nav-link.active {
-    border-color: #F15C2C;
+    border-bottom-color: #F15C2C;
 }
 
 .page-tabs-nav .tabs-nav-link:hover,
