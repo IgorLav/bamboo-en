@@ -1,9 +1,3 @@
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .offer-section .compound-bg {
-        top: 34%; /*IE 11 bg position hard fix*/
-    }
-}
-
 @media all and (min-width: 1620px) {
     .hero-title {
         font-size: 90px;
@@ -12,7 +6,7 @@
 
 @media all and (max-width: 1450px) {
     .hero {
-        background-position: 50% top;
+        /*background-position: 50% top;*/
     }
 
     /*-------------------PARTNERSHIP-------------------*/

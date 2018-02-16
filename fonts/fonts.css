@@ -5,16 +5,6 @@
     font-style: normal;
 }
 
-/*@font-face {*/
-    /*font-family: 'GalanoGrotesque';*/
-    /*src: url('GalanoGrotesque-Bold.eot?#iefix') format('embedded-opentype'),*/
-    /*url('GalanoGrotesque-Bold.otf') format('opentype'),*/
-    /*url('GalanoGrotesque-Bold.woff') format('woff'),*/
-    /*url('GalanoGrotesque-Bold.ttf') format('truetype'),*/
-    /*url('GalanoGrotesque-Bold.svg#GalanoGrotesque-Bold') format('svg');*/
-    /*font-weight: 700;*/
-    /*font-style: normal;*/
-/*}*/
 @font-face {
     font-family: 'GalanoGrotesque';
     src: url('galano_grotesque_bold-webfont.woff2') format('woff2'),

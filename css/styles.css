@@ -567,12 +567,7 @@ a {
     position: fixed;
     background: #414142 url("../img/burger.svg") no-repeat center;
     -webkit-transition: transform .4s;
-    -webkit-transition: -webkit-transform .4s;
-    transition: -webkit-transform .4s;
-    -o-transition: transform .4s;
     transition: transform .4s;
-    transition: transform .4s, -webkit-transform .4s;
-
     z-index: 1000;
 }
 
@@ -593,8 +588,9 @@ a {
 
 /*---------------------------------------HERO---------------------------------------*/
 .hero {
-    padding-top: 177px;
-    height: 100vh;
+    padding: 177px 0 160px;
+    min-height: 100vh;
+
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -751,7 +747,6 @@ a {
     top: -50px;
     left: 50%;
     min-width: 1420px;
-    width: 100%;
     -webkit-animation: 1.5s bigClouds linear infinite;
     animation: 1.5s bigClouds linear infinite;
     background-size: 100%;
@@ -816,15 +811,15 @@ a {
     padding-left: 45px;
 }
 
-.offer-box-bg:hover .house-outline{
+.offer-box-bg:hover .house-outline {
     fill: #F15C2C;
 }
 
-.offer-box-bg:hover  .offer-title {
+.offer-box-bg:hover .offer-title {
     color: #F15C2C;
 }
 
-.offer-box-bg:hover .btn{
+.offer-box-bg:hover .btn {
     background-color: #F15C2C;
     color: #fff;
 }
@@ -861,6 +856,11 @@ a {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     z-index: 5;
+}
+
+.svg-container svg {
+    width: auto;
+    height: 100%;
 }
 
 /*-------------------------------------FOOTER---------------------------------------*/
