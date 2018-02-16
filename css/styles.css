@@ -106,8 +106,11 @@ a {
     padding: 7px 30px 7px;
     text-align: center;
 
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transition: .25s;
+    transition: .25s;
 }
 
 .btn-lg {
@@ -117,8 +120,19 @@ a {
 
 .btn:hover,
 .btn:focus {
-    -webkit-box-shadow: 5px 5px 15px #626262;
-    box-shadow: 5px 5px 15px #626262;
+    -webkit-box-shadow: 5px 5px 10px #626262;
+    box-shadow: 0 5px 10px #626262;
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+}
+
+.btn:active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .btn-default {
@@ -300,8 +314,6 @@ a {
     display: flex;
     min-height: 100%;
     background-color: #fff;
-    /*max-width: 1920px;*/
-    max-width: 1600px;
     margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -582,8 +594,8 @@ a {
 /*---------------------------------------HERO---------------------------------------*/
 .hero {
     padding-top: 177px;
-    height: 1115px;
-    background-position: left top;
+    height: 100vh;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -724,8 +736,6 @@ a {
     background-size: cover;
 
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 
     z-index: 1;
@@ -784,6 +794,9 @@ a {
 .offer-section .offer-title {
     font: 700 50px/1 "GalanoGrotesque", sans-serif;
     margin-bottom: 11px;
+
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
 .offer-section .offer-sub-text {
@@ -803,17 +816,51 @@ a {
     padding-left: 45px;
 }
 
-.offer-section .houses {
+.offer-box-bg:hover .house-outline{
+    fill: #F15C2C;
+}
+
+.offer-box-bg:hover  .offer-title {
+    color: #F15C2C;
+}
+
+.offer-box-bg:hover .btn{
+    background-color: #F15C2C;
+    color: #fff;
+}
+
+.house-outline {
+    fill: #BDBEC0;
+    transition: .5s;
+}
+
+.house-fill {
+    fill: #FFF;
+}
+
+.offer-section .sm-house {
     position: absolute;
+    height: 34%;
+    width: auto;
     bottom: 0;
-    left: 40%;
-    -webkit-transform: translateX(-49%);
-    -ms-transform: translateX(-49%);
-    transform: translateX(-49%);
+    left: 44%;
+
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 5;
+}
+
+.offer-section .tall-house {
+    position: absolute;
     height: 54%;
     width: auto;
+    max-height: 400px;
+    bottom: 0;
+    right: 52%;
 
-    z-index: 3;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 5;
 }
 
 /*-------------------------------------FOOTER---------------------------------------*/
@@ -981,7 +1028,7 @@ a {
 
 .page-content ul,
 .page-content ol {
-    padding-left:40px;
+    padding-left: 40px;
     padding-bottom: 20px;
 }
 
@@ -1007,11 +1054,11 @@ a {
 }
 
 .page-content a:focus,
-.page-content a:hover{
+.page-content a:hover {
     color: #F15C2C;
 }
 
-.page-content table{
+.page-content table {
     line-height: 1;
     border: 1px solid #414042;
     margin-bottom: 40px;
