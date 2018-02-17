@@ -1,0 +1,133 @@
+.hero {
+  padding: 177px 0 160px;
+  min-height: 1100px;
+
+  background-position: 50% top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-title {
+    font: 700 90px/1 "GalanoGrotesque";
+    letter-spacing: 1px;
+    margin-bottom: 55px;
+  }
+
+  .text-box {
+    position: relative;
+    left: 0;
+    width: 54%;
+    max-width: 625px;
+    margin-left: auto;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media all and (max-width: 1460px) {
+  .hero {
+    min-height: 811px;
+    background-position: 50% top;
+    padding: 145px 0;
+
+    &-title {
+      font-size: 62px;
+      margin-bottom: 32px;
+    }
+
+    .text-box {
+      left: 0;
+    }
+  }
+}
+
+@media all and (max-width: 1370px) {
+  .hero {
+    min-height: 700px;
+
+    &-title {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      font-size: 19px;
+      max-width: 210px;
+    }
+  }
+}
+
+@media all and (max-width: 980px) {
+  .hero {
+    padding-top: 125px;
+    background-position: 55% top;
+
+
+    &-title {
+      font-size: 50px;
+    }
+
+    .text-box {
+      left: -5%;
+    }
+
+    .btn {
+      font-size: 16px;
+      max-width: none;
+      width: auto;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .hero {
+    min-height: 660px;
+    padding: 90px 0;
+    background-position: center top ;
+
+    &-title {
+      font-size: 45px;
+    }
+
+    .text-box {
+      max-width: 280px;
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .hero {
+    min-height: 540px;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    &-title {
+      font-size: 39px;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .hero {
+    &-title {
+      font-size: 30px;
+    }
+
+    .btn {
+      font-size: 14px;
+    }
+  }
+}
+
+@media all and (max-width: 390px) {
+  .hero {
+    &-title {
+      font-size: 24px;
+
+    }
+  }
+}

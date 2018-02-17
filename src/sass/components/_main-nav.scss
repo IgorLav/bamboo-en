@@ -1,0 +1,51 @@
+.main-nav {
+  &-item {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: bottom;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      font: 700 18px "Lato", sans-serif;
+      vertical-align: bottom;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $primary-color;
+
+        -webkit-transition: transform .45s;
+        transition: transform .45s;
+
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+
+        z-index: 1;
+      }
+    }
+
+    &.active a {
+      color: $primary-color;
+    }
+
+    &.active a:after,
+    a:hover:after,
+    a:focus:after {
+      -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+
+

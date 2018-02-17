@@ -1,0 +1,259 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 35px 0;
+
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+
+  z-index: 2000;
+
+  @media all and (max-width: 1370px) {
+    padding: 25px 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 226px;
+    background: url("../img/header-bg.png") repeat-x top left;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+
+    opacity: 1;
+    pointer-events: none;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    -webkit-transition: .4s;
+    transition: .4s;
+    z-index: 0;
+  }
+
+  &.affix {
+    background: #fff;
+    box-shadow: 0 0 15px #cacaca;
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  & > .container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+
+  .logo {
+    position: relative;
+    display: inline-block;
+    max-width: 285px;
+
+    @media all and (max-width: 1370px) {
+      max-width: 240px;
+    }
+
+    @media all and (max-width: 1220px) {
+      max-width: 200px;
+    }
+  }
+
+  .main-nav {
+    @media all and (max-width: 1370px) {
+      padding-top: 20px;
+    }
+  }
+
+  .nav-wrap {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .secondary-nav {
+    display: none !important;
+  }
+
+  .burger-btn,
+  .mob-nav-close {
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    display: none;
+    border: none;
+  }
+
+  .burger-btn {
+    position: fixed;
+    background: $text-color url("../img/burger.svg") no-repeat center;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+    z-index: 1000;
+
+    &.active {
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+  }
+
+  .mob-nav-close {
+    position: absolute;
+    background: url("../img/cancel.svg") no-repeat center;
+    background-size: 29px;
+    z-index: 1000;
+  }
+}
+
+@media all and (max-width: 980px) {
+  .header {
+    padding: 12px 0;
+    &:before {
+      height: 168px;
+    }
+
+    .container {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .burger-btn,
+    .mob-nav-close {
+      display: block !important;
+    }
+
+    .nav-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      text-align: center;
+
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+
+      opacity: 0;
+
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+
+      max-height: 100%;
+      background-color: rgba(65, 65, 66, 0.95);
+      padding: 20% 0 10%;
+
+      overflow-x: auto;
+      z-index: 9999;
+
+      &.active {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      li {
+        display: block;
+        text-align: center;
+        margin: 0 0 30px;
+      }
+
+      a {
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+
+    .secondary-nav {
+      position: relative;
+      display: block !important;
+
+      .container {
+        padding: 0;
+      }
+
+      .caret {
+        border-top-color: #fff;
+      }
+
+      .dropdown {
+        &-menu {
+          display: none;
+          background-color: transparent;
+          border: none;
+          padding-top: 15px;
+
+          li {
+            padding: 10px;
+            margin-bottom: 0;
+          }
+        }
+
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+
+      a {
+        font-size: 26px;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header {
+    &:before {
+      height: 112px;
+    }
+
+    .nav-wrap {
+      padding-top: 100px;
+
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
