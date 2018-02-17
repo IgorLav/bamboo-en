@@ -16,13 +16,14 @@ gulp.task('styles', function () {
     return gulp.src('./src/sass/main.scss')
         .pipe(plumber({ errorHandler: handleError }))
         .pipe(sourcemaps.init())
+        .pipe(scss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/css'));
 });
 
 
 gulp.task('watch', ['styles'], function () {
-    gulp.watch('./src/sass/**/*.scss', ['styles']);
+    gulp.watch('./sass/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles'], function () {
