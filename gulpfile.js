@@ -22,7 +22,7 @@ gulp.task('styles', function () {
 
 
 gulp.task('watch', ['styles'], function () {
-    gulp.watch('./sass/**/*.scss', ['styles']);
+    gulp.watch('./src/sass/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles'], function () {
