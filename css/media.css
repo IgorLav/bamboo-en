@@ -9,6 +9,10 @@
     .partnership-section .img-wrap img {
         width: 120%;
     }
+
+    .hero {
+        height: 900px;
+    }
 }
 
 @media all and (max-width: 1370px) {
