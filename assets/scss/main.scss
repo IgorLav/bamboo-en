@@ -1,0 +1,19 @@
+@import 'global/variables';
+@import 'fonts/fonts';
+
+@import 'global/reset';
+@import 'global/animations';
+@import 'global/typography';
+@import 'global/general';
+
+
+@import 'global/btn';
+@import 'global/main-nav';
+@import 'global/secondary-nav';
+@import 'global/header';
+@import 'global/footer';
+@import 'global/containers';
+
+//pages
+@import 'partials/home/index';
+@import 'partials/secondary';

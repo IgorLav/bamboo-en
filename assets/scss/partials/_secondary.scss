@@ -7,12 +7,10 @@
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
-
   .text-wrap {
     display: table-cell;
     vertical-align: middle;
   }
-
   .banner-title {
     font: 700 72px/1 "GalanoGrotesque", sans-serif;
   }
@@ -24,7 +22,6 @@
   display: flex;
   width: 100%;
   border: 1px solid $tab-border-color;
-
   .tabs-nav-link {
     font: 700 24px/1 'GalanoGrotesque', sans-serif;
     -webkit-box-flex: 1;
@@ -40,13 +37,11 @@
     &.active {
       border-bottom-color: $primary-color;
     }
-
     &:hover,
     &:focus,
     &.active {
       color: $primary-color;
     }
-
     &:last-child {
       border-right: none;
     }
@@ -55,7 +50,6 @@
 
 .tab-content {
   display: none;
-
   &.active {
     display: block;
   }
@@ -64,80 +58,65 @@
 .page-content {
   font: 28px "GalanoGrotesque", sans-serif;
   padding: 80px 0 150px;
-
   p {
     margin-bottom: 50px;
   }
-
   h1,
   h2,
   h3 {
     font: 700 48px/1 "GalanoGrotesque", sans-serif;
     margin-bottom: 35px;
   }
-
   h4 {
     font-size: 40px;
   }
-
   h5 {
     font-size: 32px;
   }
-
   h6 {
     font-size: 26px;
   }
-
   h4,
   h5,
   h6 {
     margin-bottom: 20px;
   }
-
   ul,
   ol {
     padding-left: 40px;
     padding-bottom: 20px;
   }
-
   li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-left: 10px;
   }
-
   ul li {
     list-style: circle;
   }
-
   ol li {
     list-style-type: decimal;
   }
-
   strong {
     font-weight: 700;
   }
-
   a {
     text-decoration: underline;
   }
-
   a:focus,
   a:hover {
     color: $primary-color;
+    text-decoration: none;
   }
-
   table {
     line-height: 1;
     border: 1px solid #414042;
     margin-bottom: 40px;
   }
-
   table td,
   table th {
     border: 1px solid #414042;
     padding: 15px 15px;
   }
-
   blockquote {
     padding-left: 80px;
     border-left: 2px solid #414042;
@@ -151,32 +130,22 @@
 }
 
 @media all and (max-width: 980px) {
-
   .page-banner .banner-title {
     font-size: 65px;
   }
-
   .page-content {
     font-size: 24px;
     padding-top: 60px;
-
     p {
       margin-bottom: 40px;
     }
-
     ul, ol {
       padding-left: 40px;
     }
-
-    li {
-      margin-bottom: 30px;
-    }
-
     blockquote {
       padding-left: 50px;
     }
   }
-
   .page-tabs-nav {
     .tabs-nav-link {
       font-size: 20px;
@@ -198,47 +167,41 @@
   .page-banner .banner-title {
     font-size: 55px;
   }
-
   .page-content {
     font-size: 22px;
     padding: 50px 0 80px;
-
     h1,
     h2,
     h3 {
       font-size: 38px;
     }
-
     h4 {
       font-size: 32px;
     }
-
     h5 {
       font-size: 26px;
     }
-
     h6 {
       font-size: 24px;
     }
-
     h4,
     h5,
     h6 {
       margin-bottom: 15px;
     }
+    li {
+      margin-bottom: 10px;
+    }
   }
 }
 
 @media all and (max-width: 480px) {
-  /*SECONDARY PAGE*/
   .page-banner .banner-title {
     font-size: 44px;
   }
-
   .page-tabs-nav .tabs-nav-link {
     font-size: 16px;
   }
-
   .page-content {
     font-size: 18px;
     ul,
@@ -256,16 +219,13 @@
     h3 {
       font-size: 28px;
     }
-
     h4 {
       font-size: 24px;
     }
-
     h5,
     h6 {
       font-size: 20px;
     }
-
     blockquote {
       padding-left: 25px;
     }

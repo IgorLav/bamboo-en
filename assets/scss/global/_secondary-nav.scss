@@ -3,28 +3,22 @@
   top: 0;
   right: 0;
   width: 100%;
-
   text-align: right;
   padding: 15px 0 7px;
   visibility: hidden;
-
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   z-index: 1;
-
   &-item {
     display: inline-block;
     margin-right: 37px;
     vertical-align: top;
-
     &:last-child {
       margin-right: 0;
     }
-
     a {
       font: 12px Roboto, sans-serif;
       text-transform: uppercase;
-
       &:hover,
       &:focus {
         color: $primary-color;
@@ -34,7 +28,6 @@
 
   .dropdown {
     position: relative;
-
     .dropdown-menu {
       position: absolute;
       top: 100%;
@@ -51,14 +44,11 @@
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
-
       z-index: 100;
-
       li {
         padding: 5px;
       }
     }
-
     &:hover {
       .dropdown-menu {
         padding: 5px 0;

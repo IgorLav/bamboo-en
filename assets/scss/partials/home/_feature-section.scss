@@ -1,5 +1,5 @@
 .feature-section {
-  background: url("../img/frame.jpg") no-repeat right center;
+  background: url("../../img/frame.jpg") no-repeat right center;
   background-size: cover;
 
   -webkit-box-shadow: 0 0 20px #434343;
@@ -18,6 +18,7 @@
 @media all and (max-width: 1600px) {
   .feature-section {
     background-size: 1600px auto;
+    background-position: right bottom;
   }
 }
 
