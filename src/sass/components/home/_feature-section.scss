@@ -1,13 +1,18 @@
 .feature-section {
-  background: url("../img/window-bg.jpg") no-repeat right bottom;
+  background: url("../img/frame.jpg") no-repeat right center;
   background-size: cover;
-  border-bottom: 3px solid #fff;
 
   -webkit-box-shadow: 0 0 20px #434343;
   box-shadow: 0 0 20px #434343;
 
   padding: 185px 0 360px;
   margin-bottom: 5px;
+}
+
+@media all and (max-width: 1600px) {
+  .feature-section {
+    background-size: 1920px auto;
+  }
 }
 
 @media all and (max-width: 980px) {

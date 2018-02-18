@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber');
 
 
-
 function handleError(err) {
     console.log(err.toString());
     this.emit('end');
@@ -23,7 +22,7 @@ gulp.task('styles', function () {
 
 
 gulp.task('watch', ['styles'], function () {
-    gulp.watch('./sass/**/*.scss', ['styles']);
+    gulp.watch('./src/sass/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles'], function () {
