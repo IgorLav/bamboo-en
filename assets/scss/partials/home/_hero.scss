@@ -23,6 +23,18 @@
   }
 }
 
+@media all and (max-width: 2200px) {
+  .hero {
+    background-position-x: 70%;
+  }
+}
+
+@media all and (max-width: 1740px) {
+  .hero {
+    background-position-x: 62%;
+  }
+}
+
 @media all and (max-width: 1460px) {
   .hero {
     min-height: 811px;
@@ -73,8 +85,8 @@
 @media all and (max-width: 767px) {
   .hero {
     min-height: 660px;
-    padding: 90px 0;
-    background-position: center top ;
+    padding: 110px 0 90px;
+    background-position: center top;
     &-title {
       font-size: 45px;
     }

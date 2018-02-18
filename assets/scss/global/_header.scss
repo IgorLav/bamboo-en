@@ -196,6 +196,12 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  .header:before {
+    height: 100px;
+  }
+}
+
 @media all and (max-width: 640px) {
   .header {
     .logo  {
