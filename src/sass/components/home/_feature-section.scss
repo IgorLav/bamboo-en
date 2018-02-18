@@ -9,9 +9,15 @@
   margin-bottom: 5px;
 }
 
+@media all and (max-width: 1900px) {
+  .feature-section {
+    background-size: 1900px auto;
+  }
+}
+
 @media all and (max-width: 1600px) {
   .feature-section {
-    background-size: 1920px auto;
+    background-size: 1600px auto;
   }
 }
 
