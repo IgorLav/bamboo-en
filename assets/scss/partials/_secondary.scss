@@ -101,6 +101,8 @@
   }
   a {
     text-decoration: underline;
+    -webkit-transition: .15s;
+    transition: .15s;
   }
   a:focus,
   a:hover {
