@@ -34,22 +34,23 @@ jQuery(document).ready(function () {
 
     function replayVideo() {
         var a = document.getElementById('videoWindow');
-        a.currentTime = 2;
+        a.currentTime = 2.4;
         a.play();
         setTimeout(function () {
             replayVideo();
-        }, 4000)
+        }, 8000)
     }
 
     // animate effects
     function windowAnim () {
+        var run = true;
+
         $(window).on('scroll load', function() {
             var el = $(".feature-section");
             var top_of_element = el.offset().top * 1.3;
             var bottom_of_element = el.offset().top + el.outerHeight();
             var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
             var top_of_screen = $(window).scrollTop();
-            var run = true;
             if(run && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
                 var video = document.getElementById('videoWindow');
                 video.play();
