@@ -32,7 +32,35 @@ jQuery(document).ready(function () {
         }
     });
 
+    function replayVideo() {
+        var a = document.getElementById('videoWindow');
+        a.currentTime = 2;
+        a.play();
+        setTimeout(function () {
+            replayVideo();
+        }, 4000)
+    }
+
     // animate effects
+    function windowAnim () {
+        $(window).scroll(function() {
+            var el = $(".feature-section");
+            var top_of_element = el.offset().top * 1.3;
+            var bottom_of_element = el.offset().top + el.outerHeight();
+            var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
+            var top_of_screen = $(window).scrollTop();
+            var run = true;
+            if(run && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+                var video = document.getElementById('videoWindow');
+                video.play();
+                run = false;
+                setTimeout(function () {
+                    replayVideo()
+                }, 8000)
+            }
+        });
+    }
+
     function sectionAnim() {
         (function (jQuery) {
             jQuery.fn.animated = function (inEffect, outEffect) {
@@ -42,22 +70,27 @@ jQuery(document).ready(function () {
                     } else {
                         jQuery(this).addClass(outEffect).css("opacity", "1");
                     }
-
-                    if (inEffect === 'play') {
-                        var video = document.getElementById('videoWindow');
-                        video.play();
-                    }
                 }, {
                     offset: "80%"
                 });
             };
         })(jQuery);
 
+        windowAnim();
+
         jQuery(".fromLeft").animated("fadeInLeft");
         jQuery(".fromRight").animated("fadeInRight");
         jQuery(".fromDown").animated("fadeInUp");
-        jQuery(".video-anim").animated("play");
     }
+
+     var resizeTimer;
+
+    $(window).on('resize', function(e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            windowAnim();
+        }, 200);
+    });
 
     if (jQuery.waypoints) {
         sectionAnim();
