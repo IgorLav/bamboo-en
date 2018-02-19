@@ -42,13 +42,13 @@ jQuery(document).ready(function () {
                     } else {
                         jQuery(this).addClass(outEffect).css("opacity", "1");
                     }
+
+                    if(inEffect === 'play') {
+                        document.getElementById('videoWindow').play();
+                    }
                 }, {
                     offset: "80%"
                 });
-
-                if(inEffect === 'play') {
-                    $('.video-anim video').get(0).play();
-                }
             };
         })(jQuery);
 

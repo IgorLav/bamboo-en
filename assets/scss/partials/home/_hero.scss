@@ -24,69 +24,71 @@
     font-size: 13px;
   }
 }
+
 @media all and (min-width: $screen-sm-min) {
-    .hero {
-          @include aspect-ratio(1440,728);
-          background-image: url(../../img/hero-bg_3200_40.jpg);
+  .hero {
+    @include aspect-ratio(1440, 728);
+    background-image: url(../../img/hero-bg_3200_40.jpg);
 
-           .text-box {
-              // left: 0;
-              top: 0;
-              margin-left: 48%;
-              margin-top: 16%;
-              position: absolute; 
+    .text-box {
+      top: 0;
+      margin-left: 48%;
+      margin-top: 16%;
+      position: absolute;
 
-            }
-            &-title {
-              font-size: 45px;
-            }
-            .btn {
-              font-size: 20px;
-            }
     }
+    &-title {
+      font-size: 45px;
+    }
+    .btn {
+      font-size: 20px;
+    }
+  }
 
 }
+
 @media all and (min-width: $screen-md-min) {
-    .hero {  
-          padding: 65px 0 224px;
-           .text-box {
-              margin-top: 15%;
-            }
+  .hero {
+    padding: 65px 0 224px;
+    .text-box {
+      margin-top: 15%;
     }
+  }
 
 }
+
 @media all and (min-width: $screen-lg-min) {
-    .hero {
-          padding: 65px 0 100px;
+  .hero {
+    padding: 65px 0 100px;
 
-           .text-box {
-
-              margin-top: 9%;
-
-            }
-            &-title {
-              font-size: 56px;
-            }
-            .btn {
-              font-size: 20px;
-            }
+    .text-box {
+      margin-top: 9%;
     }
+    &-title {
+      font-size: 56px;
+    }
+    .btn {
+      font-size: 20px;
+    }
+  }
 
 }
+
 @media all and (min-width: $screen-xl-min) {
-    .hero {
-          padding: 65px 0 0px;
-    }
+  .hero {
+    padding: 65px 0 0px;
+  }
 }
+
 @media all and (min-width: $screen-xxl-min) {
-    .hero {
-           &-title {
-              font-size: 71px;
-            }
-            .btn {
-              font-size: 25px;
-            }
+  .hero {
+    &-title {
+      font-size: 71px;
     }
+    .btn {
+      font-size: 25px;
+    }
+  }
 
 }
 
@@ -106,15 +108,15 @@
   .hero {
     // min-height: auto;
     // background-position: calc(50% - 150px) top;
-    
+
     // padding: 145px 0;
-    
+
     // &-title {
     //   // font-size: 62px;
     //   font-size: 50px;
     //   margin-bottom: 32px;
     // }
-    
+
   }
 }
 
