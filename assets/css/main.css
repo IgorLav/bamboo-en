@@ -335,10 +335,16 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 226px;
-    background: url("../../img/header-bg.png") repeat-x top left;
-    -webkit-background-size: auto 100%;
-    background-size: auto 100%;
+    height: 180px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+    background: -moz-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    /* IE6-9 */
     opacity: 1;
     pointer-events: none;
     -webkit-transform: translateZ(0);
@@ -352,7 +358,6 @@ body {
     .header.affix:before {
       opacity: 0; }
   .header > .container {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -365,7 +370,9 @@ body {
   .header .logo {
     position: relative;
     display: inline-block;
-    max-width: 285px; }
+    max-width: 285px;
+    margin-left: 0;
+    top: 0; }
   .header .nav-wrap {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -399,6 +406,21 @@ body {
     background-size: 29px;
     z-index: 1000; }
 
+@media all and (min-width: 1200px) {
+  .header .logo {
+    position: absolute;
+    display: inline-block;
+    margin-left: 9%;
+    left: 0;
+    top: 30%; }
+  .header .nav-wrap {
+    padding-top: 30px; }
+
+  .header:not(.affix) .logo {
+    margin-left: 21%; } }
+@media all and (min-width: 1700px) {
+  .header .logo {
+    margin-left: 15%; } }
 @media all and (max-width: 1370px) {
   .header {
     padding: 25px 0; }
@@ -602,15 +624,15 @@ body {
   .container-mob {
     padding: 0 20px; } }
 .hero {
-  padding: 177px 0 160px;
-  min-height: 1100px;
+  padding: 100px 0 245px;
+  background-image: url(../../img/hero-bg-mobile.jpg);
   background-position: 50% top;
   background-repeat: no-repeat;
   background-size: cover; }
   .hero-title {
-    font: 700 90px/1 "GalanoGrotesque";
+    font: 700 30px/1 "GalanoGrotesque";
     letter-spacing: 1px;
-    margin-bottom: 55px; }
+    margin-bottom: 20px; }
   .hero .text-box {
     position: relative;
     left: 0;
@@ -618,70 +640,49 @@ body {
     max-width: 625px;
     margin-left: auto; }
   .hero .btn {
-    width: 100%;
-    max-width: 250px; }
+    max-width: 250px;
+    font-size: 13px; }
 
-@media all and (max-width: 2200px) {
+@media all and (min-width: 768px) {
   .hero {
-    background-position-x: 70%; } }
-@media all and (max-width: 1740px) {
-  .hero {
-    background-position-x: 62%; } }
-@media all and (max-width: 1460px) {
-  .hero {
-    min-height: 811px;
-    background-position: 50% top;
-    padding: 145px 0; }
-    .hero-title {
-      font-size: 62px;
-      margin-bottom: 32px; }
+    position: relative;
+    background-image: url(../../img/hero-bg_3200_40.jpg); }
+    .hero:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 50.5555555556%; }
     .hero .text-box {
-      left: 0; } }
-@media all and (max-width: 1370px) {
-  .hero {
-    min-height: 700px; }
-    .hero-title {
-      font-size: 55px;
-      margin-bottom: 20px; }
-    .hero .btn {
-      font-size: 19px;
-      max-width: 210px; } }
-@media all and (max-width: 980px) {
-  .hero {
-    padding-top: 125px;
-    background-position: 55% top; }
-    .hero-title {
-      font-size: 50px; }
-    .hero .text-box {
-      left: -5%; }
-    .hero .btn {
-      font-size: 16px;
-      max-width: none;
-      width: auto; } }
-@media all and (max-width: 767px) {
-  .hero {
-    min-height: 660px;
-    padding: 110px 0 90px;
-    background-position: center top; }
+      top: 0;
+      margin-left: 48%;
+      margin-top: 16%;
+      position: absolute; }
     .hero-title {
       font-size: 45px; }
-    .hero .text-box {
-      max-width: 280px; } }
-@media all and (max-width: 640px) {
+    .hero .btn {
+      font-size: 20px; } }
+@media all and (min-width: 992px) {
   .hero {
-    min-height: 540px; }
-    .hero .container {
-      padding: 0 15px; }
+    padding: 65px 0 224px; }
+    .hero .text-box {
+      margin-top: 15%; } }
+@media all and (min-width: 1200px) {
+  .hero {
+    padding: 65px 0 100px; }
+    .hero .text-box {
+      margin-top: 9%; }
     .hero-title {
-      font-size: 39px; } }
-@media all and (max-width: 480px) {
+      font-size: 56px; }
+    .hero .btn {
+      font-size: 20px; } }
+@media all and (min-width: 1400px) {
+  .hero {
+    padding: 65px 0 0px; } }
+@media all and (min-width: 1700px) {
   .hero-title {
-    font-size: 30px; }
+    font-size: 71px; }
   .hero .btn {
-    font-size: 14px; } }
-@media all and (max-width: 390px) {
-  .hero-title {
-    font-size: 24px; } }
+    font-size: 25px; } }
 .section-title {
   font: 700 60px/1.12 "GalanoGrotesque", sans-serif;
   margin-bottom: 25px; }

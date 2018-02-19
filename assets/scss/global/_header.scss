@@ -15,11 +15,19 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 226px;
+    // height: 226px;
+    height: 180px;
 
-    background: url("../../img/header-bg.png") repeat-x top left;
-    -webkit-background-size: auto 100%;
-    background-size: auto 100%;
+    // background: url("../../img/header-bg.png") repeat-x top left;
+    // background: url("../../img/header-bg.png") repeat-x bottom left;
+    // -webkit-background-size: auto 100%;
+    // background-size: auto 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
     opacity: 1;
     pointer-events: none;
 
@@ -37,7 +45,7 @@
     }
   }
   & > .container {
-    position: relative;
+    // position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -52,6 +60,8 @@
     position: relative;
     display: inline-block;
     max-width: 285px;
+    margin-left: 0;
+    top: 0;
   }
   .nav-wrap {
     -webkit-box-flex: 1;
@@ -91,6 +101,39 @@
     background-size: 29px;
     z-index: 1000;
   }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .header {
+      .logo {
+                position: absolute;
+                display: inline-block;
+                margin-left: 9%;
+                left: 0;
+                 top: 30%;
+      }
+      .nav-wrap {
+        padding-top: 30px;
+      }
+  }
+  .header:not(.affix) {
+      // padding: 55px 0;
+      .logo {            
+            margin-left: 21%;
+            // left: 0;
+            // top: 14%;
+      }
+      
+  }
+}
+@media all and (min-width: $screen-xxl-min) {
+  .header {
+      .logo {
+                
+                margin-left: 15%;       
+      }
+  }
+
 }
 
 @media all and (max-width: 1370px) {

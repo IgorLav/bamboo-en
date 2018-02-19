@@ -1,15 +1,16 @@
 .hero {
-  padding: 177px 0 160px;
-  min-height: 1100px;
-
+  padding: 100px 0 245px;
+  // min-height: 1100px;
+  background-image: url(../../img/hero-bg-mobile.jpg);
   background-position: 50% top;
   background-repeat: no-repeat;
   background-size: cover;
   &-title {
-    font: 700 90px/1 "GalanoGrotesque";
+    font: 700 30px/1 "GalanoGrotesque";
     letter-spacing: 1px;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
   }
+
   .text-box {
     position: relative;
     left: 0;
@@ -18,111 +19,179 @@
     margin-left: auto;
   }
   .btn {
-    width: 100%;
+    // width: 100%;
     max-width: 250px;
+    font-size: 13px;
   }
+}
+@media all and (min-width: $screen-sm-min) {
+    .hero {
+          @include aspect-ratio(1440,728);
+          background-image: url(../../img/hero-bg_3200_40.jpg);
+
+           .text-box {
+              // left: 0;
+              top: 0;
+              margin-left: 48%;
+              margin-top: 16%;
+              position: absolute; 
+
+            }
+            &-title {
+              font-size: 45px;
+            }
+            .btn {
+              font-size: 20px;
+            }
+    }
+
+}
+@media all and (min-width: $screen-md-min) {
+    .hero {  
+          padding: 65px 0 224px;
+           .text-box {
+              margin-top: 15%;
+            }
+    }
+
+}
+@media all and (min-width: $screen-lg-min) {
+    .hero {
+          padding: 65px 0 100px;
+
+           .text-box {
+
+              margin-top: 9%;
+
+            }
+            &-title {
+              font-size: 56px;
+            }
+            .btn {
+              font-size: 20px;
+            }
+    }
+
+}
+@media all and (min-width: $screen-xl-min) {
+    .hero {
+          padding: 65px 0 0px;
+    }
+}
+@media all and (min-width: $screen-xxl-min) {
+    .hero {
+           &-title {
+              font-size: 71px;
+            }
+            .btn {
+              font-size: 25px;
+            }
+    }
+
 }
 
 @media all and (max-width: 2200px) {
   .hero {
-    background-position-x: 70%;
+    // background-position-x: 70%;
   }
 }
 
 @media all and (max-width: 1740px) {
   .hero {
-    background-position-x: 62%;
+    // background-position-x: 62%;
   }
 }
 
 @media all and (max-width: 1460px) {
   .hero {
-    min-height: 811px;
-    background-position: 50% top;
-    padding: 145px 0;
-    &-title {
-      font-size: 62px;
-      margin-bottom: 32px;
-    }
-    .text-box {
-      left: 0;
-    }
+    // min-height: auto;
+    // background-position: calc(50% - 150px) top;
+    
+    // padding: 145px 0;
+    
+    // &-title {
+    //   // font-size: 62px;
+    //   font-size: 50px;
+    //   margin-bottom: 32px;
+    // }
+    
   }
 }
 
 @media all and (max-width: 1370px) {
-  .hero {
-    min-height: 700px;
-    &-title {
-      font-size: 55px;
-      margin-bottom: 20px;
-    }
-    .btn {
-      font-size: 19px;
-      max-width: 210px;
-    }
-  }
+  // .hero {
+  //   // min-height: 700px;
+  //   &-title {
+  //     font-size: 55px;
+  //     margin-bottom: 20px;
+  //   }
+  //   .btn {
+  //     font-size: 19px;
+  //     max-width: 210px;
+  //   }
+  // }
 }
 
 @media all and (max-width: 980px) {
-  .hero {
-    padding-top: 125px;
-    background-position: 55% top;
-    &-title {
-      font-size: 50px;
-    }
-    .text-box {
-      left: -5%;
-    }
-    .btn {
-      font-size: 16px;
-      max-width: none;
-      width: auto;
-    }
-  }
+  // .hero {
+  //   padding-top: 125px;
+  //   background-position: 55% top;
+  //   &-title {
+  //     font-size: 50px;
+  //   }
+  //   .text-box {
+  //     left: -5%;
+  //     margin-left: auto;
+  //   }
+  //   .btn {
+  //     font-size: 16px;
+  //     max-width: none;
+  //     width: auto;
+  //   }
+  // }
 }
 
 @media all and (max-width: 767px) {
-  .hero {
-    min-height: 660px;
-    padding: 110px 0 90px;
-    background-position: center top;
-    &-title {
-      font-size: 45px;
-    }
-    .text-box {
-      max-width: 280px;
-    }
-  }
+  // .hero {
+  //   min-height: 660px;
+  //   padding: 110px 0 90px;
+  //   background-position: center top;
+  //   &-title {
+  //     font-size: 45px;
+  //   }
+  //   .text-box {
+  //     max-width: 280px;
+  //   }
+  // }
 }
 
 @media all and (max-width: 640px) {
-  .hero {
-    min-height: 540px;
-    .container {
-      padding: 0 15px;
-    }
-    &-title {
-      font-size: 39px;
-    }
-  }
+  // .hero {
+  //   min-height: 540px;
+  //   .container {
+  //     padding: 0 15px;
+  //   }
+  //   &-title {
+  //     font-size: 39px;
+  //   }
+  // }
 }
 
 @media all and (max-width: 480px) {
-  .hero {
-    &-title {
-      font-size: 30px;
-    }
-    .btn {
-      font-size: 14px;
-    }
-  }
+  // .hero {
+  //   &-title {
+  //     font-size: 30px;
+  //   }
+  //   .btn {
+  //     font-size: 14px;
+  //   }
+  // }
 }
 
 @media all and (max-width: 390px) {
-  .hero {
-    &-title {
-      font-size: 24px;
-    }
-  }
+  // .hero {
+  //   &-title {
+  //     font-size: 24px;
+  //   }
+  // }
 }
