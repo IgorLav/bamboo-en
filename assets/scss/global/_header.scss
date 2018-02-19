@@ -109,12 +109,11 @@
       position: absolute;
       display: inline-block;
       margin-left: 9%;
-      max-width: 200px;
       left: 0;
       top: 30%;
     }
     .nav-wrap {
-      padding-top: 6px;
+      padding-top: 30px;
     }
   }
   .header:not(.affix) {
@@ -127,14 +126,18 @@
   }
 }
 
+@media all and (min-width: $screen-lg-min) and (max-width: 1370px) {
+  .header {
+    .nav-wrap {
+      padding-top: 15px;
+    }
+  }
+}
+
 @media all and (min-width: $screen-xxl-min) {
   .header {
     .logo {
       margin-left: 15%;
-    }
-
-    .main-nav {
-      padding-top: 10px;
     }
   }
 
@@ -143,9 +146,6 @@
 @media all and (max-width: 1370px) {
   .header {
     padding: 25px 0;
-    .main-nav {
-      padding-top: 20px;
-    }
     .logo {
       max-width: 240px;
     }
