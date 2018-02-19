@@ -42,19 +42,21 @@ jQuery(document).ready(function () {
     }
 
     // animate effects
-    function windowAnim () {
-        var run = true;
+    var runWindowAnim = true;
 
-        $(window).on('scroll load', function() {
+    function windowAnim () {
+        $(window).on('scroll ', function() {
             var el = $(".feature-section");
             var top_of_element = el.offset().top * 1.3;
             var bottom_of_element = el.offset().top + el.outerHeight();
             var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
             var top_of_screen = $(window).scrollTop();
-            if(run && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+
+            if(runWindowAnim && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
                 var video = document.getElementById('videoWindow');
                 video.play();
-                run = false;
+                console.log(444);
+                runWindowAnim = false;
                 setTimeout(function () {
                     replayVideo()
                 }, 8000)
