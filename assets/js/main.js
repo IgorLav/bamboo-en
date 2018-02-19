@@ -45,12 +45,17 @@ jQuery(document).ready(function () {
                 }, {
                     offset: "80%"
                 });
+
+                if(inEffect === 'play') {
+                    $('.video-anim video').get(0).play();
+                }
             };
         })(jQuery);
 
         jQuery(".fromLeft").animated("fadeInLeft");
         jQuery(".fromRight").animated("fadeInRight");
         jQuery(".fromDown").animated("fadeInUp");
+        jQuery(".video-anim").animated("play");
     }
 
     if(jQuery.waypoints) {
