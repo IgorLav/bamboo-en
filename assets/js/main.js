@@ -43,7 +43,7 @@ jQuery(document).ready(function () {
 
     // animate effects
     function windowAnim () {
-        $(window).scroll(function() {
+        $(window).on('scroll load', function() {
             var el = $(".feature-section");
             var top_of_element = el.offset().top * 1.3;
             var bottom_of_element = el.offset().top + el.outerHeight();
