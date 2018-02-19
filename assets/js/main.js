@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
         e.preventDefault();
     });
 
-    function mobNavToggle () {
+    function mobNavToggle() {
         var mobNav = jQuery('.header .nav-wrap');
         var burger = jQuery('.burger-btn');
         var body = jQuery('body');
@@ -33,18 +33,19 @@ jQuery(document).ready(function () {
     });
 
     // animate effects
-    function sectionAnim () {
-        (function(jQuery) {
-            jQuery.fn.animated = function(inEffect, outEffect) {
-                jQuery(this).css("opacity", "0").addClass("animated").waypoint(function(dir) {
+    function sectionAnim() {
+        (function (jQuery) {
+            jQuery.fn.animated = function (inEffect, outEffect) {
+                jQuery(this).css("opacity", "0").addClass("animated").waypoint(function (dir) {
                     if (dir === "down") {
                         jQuery(this).addClass(inEffect).css("opacity", "1");
                     } else {
                         jQuery(this).addClass(outEffect).css("opacity", "1");
                     }
 
-                    if(inEffect === 'play') {
-                        document.getElementById('videoWindow').play();
+                    if (inEffect === 'play') {
+                        var video = document.getElementById('videoWindow');
+                        video.play();
                     }
                 }, {
                     offset: "80%"
@@ -58,7 +59,7 @@ jQuery(document).ready(function () {
         jQuery(".video-anim").animated("play");
     }
 
-    if(jQuery.waypoints) {
+    if (jQuery.waypoints) {
         sectionAnim();
     }
 
@@ -70,6 +71,6 @@ jQuery(document).ready(function () {
         jQuery('.page-tabs-nav a').removeClass('active');
         jQuery('.tab-content').removeClass('active').hide();
         jQuery(this).addClass('active');
-            jQuery(tabId).fadeIn(600).addClass('active');
+        jQuery(tabId).fadeIn(600).addClass('active');
     });
 });
