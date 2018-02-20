@@ -28,9 +28,13 @@
   }
   .big-clouds {
     position: absolute;
-    top: -50px;
-    left: 50%;
-    min-width: 1920px;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 1920px;
+    margin: 0 auto;
+
     -webkit-animation: 1.5s bigClouds linear infinite;
     animation: 1.5s bigClouds linear infinite;
     background-size: 100%;
@@ -192,6 +196,12 @@
     .small-clouds {
       min-width: 1300px;
       top: 60%;
+    }
+
+    .big-clouds {
+      display: none;
+      -webkit-animation-name: none;
+      animation-name: none;
     }
     .sm-house {
       height: 44%;

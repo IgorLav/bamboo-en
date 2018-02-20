@@ -22,6 +22,13 @@
     // width: 100%;
     max-width: 250px;
     font-size: 13px;
+
+    &:hover,
+    &:focus {
+      -webkit-box-shadow: 5px 5px 10px -2px $shadow-color;
+      -moz-box-shadow: 5px 5px 10px -2px $shadow-color;
+      box-shadow: 5px 5px 10px -2px $shadow-color;
+    }
   }
 }
 
