@@ -25,8 +25,8 @@
     width: 700px;
     right: 0;
     top:50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translate(25%, -50%);
+    transform: translate(25%, -50%);
     direction: rtl;
     z-index: 1;
 
@@ -58,6 +58,11 @@
 @media all and (max-width: 1600px) {
   .feature-section {
     padding-bottom: 240px;
+
+    .video-anim {
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
   }
 }
 
