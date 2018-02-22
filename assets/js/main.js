@@ -83,6 +83,7 @@ jQuery(document).ready(function () {
         jQuery(".fromLeft").animated("fadeInLeft");
         jQuery(".fromRight").animated("fadeInRight");
         jQuery(".fromDown").animated("fadeInUp");
+        jQuery(".fade").animated("fadeIn");
     }
 
      var resizeTimer;

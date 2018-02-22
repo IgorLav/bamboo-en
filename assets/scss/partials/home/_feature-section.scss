@@ -1,12 +1,12 @@
 .feature-section {
   position: relative;
-  background: url(../../img/frame.jpg) top center no-repeat;
+  background: url(../../img/frame.jpg) center no-repeat;
   background-size: cover;
 
   -webkit-box-shadow: 0 0 20px #434343;
   box-shadow: 0 0 20px #434343;
 
-  padding: 185px 0 320px;
+  padding: 185px 0 275px;
   margin-bottom: 5px;
   overflow: hidden;
 
@@ -22,11 +22,11 @@
 
   .video-anim {
     position: absolute;
-    width: 700px;
+    width: 800px;
     right: 0;
     top:50%;
-    -webkit-transform: translate(25%, -50%);
-    transform: translate(25%, -50%);
+    -webkit-transform: translate(25%, -40%);
+    transform: translate(25%, -40%);
     direction: rtl;
     z-index: 1;
 
@@ -58,10 +58,11 @@
 @media all and (max-width: 1600px) {
   .feature-section {
     padding-bottom: 240px;
-
+    
     .video-anim {
-      -webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
+      width: 700px;
+      -webkit-transform: translate(5%, -40%);
+      transform: translate(5%, -40%);
     }
   }
 }
@@ -78,8 +79,8 @@
 
     .video-anim video {
       width: 540px;
-      -webkit-transform: translateX(25%);
-      transform: translateX(25%);
+      -webkit-transform: translateX(10%);
+      transform: translateX(10%);
     }
   }
 }
@@ -90,7 +91,6 @@
     padding-top: 90px;
     .video-anim {
       position: relative;
-      padding-bottom: 50px;
       max-width: 640px;
       width: 100%;
       margin: 0 auto;
