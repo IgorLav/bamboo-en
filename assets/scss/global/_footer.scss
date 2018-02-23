@@ -5,10 +5,12 @@
 */
 
 .footer {
+  position: relative;
   margin-top: auto;
   padding: 53px 0 60px;
   color: #fff;
   overflow: hidden;
+  z-index: 10;
   .top-footer {
     display: -webkit-box;
     display: -ms-flexbox;

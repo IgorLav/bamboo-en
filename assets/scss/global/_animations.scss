@@ -135,6 +135,11 @@
   animation-fill-mode: forwards;
 }
 
+.animated.fadeIn {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;

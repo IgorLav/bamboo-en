@@ -4,9 +4,9 @@ jQuery(document).ready(function () {
     });
 
     function mobNavToggle() {
-        var mobNav = jQuery('.header .nav-wrap');
-        var burger = jQuery('.burger-btn');
-        var body = jQuery('body');
+        var mobNav = jQuery('.header .nav-wrap'),
+            burger = jQuery('.burger-btn'),
+            body = jQuery('body');
 
         burger.click(function (e) {
             jQuery(this).addClass('active');
@@ -23,8 +23,8 @@ jQuery(document).ready(function () {
 
     mobNavToggle();
 
-    var stickyNav = jQuery('.header');
-    var introSectionHeight = jQuery('.intro-section');
+    var stickyNav = jQuery('.header'),
+        introSectionHeight = jQuery('.intro-section');
 
     stickyNav.affix({
         offset: {
@@ -44,21 +44,23 @@ jQuery(document).ready(function () {
     // animate effects
     var runWindowAnim = true;
 
-    function windowAnim () {
-        $(window).on('scroll ', function() {
-            var el = $(".feature-section");
-            var top_of_element = el.offset().top * 1.3;
-            var bottom_of_element = el.offset().top + el.outerHeight();
-            var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
-            var top_of_screen = $(window).scrollTop();
+    function windowAnim() {
+        $(window).on('scroll ', function () {
+            var el = $(".feature-section video"),
+                top_of_element = el.offset().top,
+                bottom_of_element = el.offset().top + el.outerHeight(),
+                bottom_of_screen = $(window).scrollTop() + window.innerHeight,
+                top_of_screen = $(window).scrollTop();
 
-            if(runWindowAnim && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+            if (runWindowAnim && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
                 var video = document.getElementById('videoWindow');
-                video.play();
-                runWindowAnim = false;
                 setTimeout(function () {
-                    replayVideo()
-                }, 8000)
+                    video.play();
+                    runWindowAnim = false;
+                    setTimeout(function () {
+                        replayVideo()
+                    }, 8000)
+                }, 700)
             }
         });
     }
@@ -73,7 +75,7 @@ jQuery(document).ready(function () {
                         jQuery(this).addClass(outEffect).css("opacity", "1");
                     }
                 }, {
-                    offset: "80%"
+                    offset: "70%"
                 });
             };
         })(jQuery);
@@ -86,12 +88,109 @@ jQuery(document).ready(function () {
         jQuery(".fade").animated("fadeIn");
     }
 
-     var resizeTimer;
+    //mobHousesSlider
+    function houseSlider() {
+        var windowW = $(window).width(),
+            sliderTrack = $('.offer-boxes .inner-container'),
+            card = $('.offer-boxes .card-box'),
+            cardWidth = '',
+            currentIndex = 0,
+            next = $('.next-btn'),
+            prev = $('.prev-btn');
 
-    $(window).on('resize', function(e) {
+        function setDimensions() {
+            cardWidth = card.outerWidth();
+            sliderTrack.outerWidth(cardWidth * card.length);
+            card.outerWidth(cardWidth);
+        }
+
+        function resetDimensions() {
+            sliderTrack.css('width', '');
+            card.css('width', '');
+            sliderTrack.css({
+                transform: "none"
+            });
+            card.removeClass('active');
+        }
+
+        function setActiveClass() {
+            card.removeClass('active');
+            card.eq(currentIndex).addClass('active');
+        }
+
+        function hideBtn() {
+            $('.offer-slider-btn').removeClass('hidden');
+            if (currentIndex <= 0) {
+                $('.prev-btn').addClass('hidden')
+            }
+            if (currentIndex >= card.length - 1) {
+                $('.next-btn').addClass('hidden')
+            }
+        }
+
+        function nextSlide(e) {
+            e.preventDefault();
+            if (currentIndex >= card.length - 1) {
+                currentIndex = card.length - 1;
+                return false;
+            }
+            currentIndex++;
+            sliderTrack.css({
+                transform: "translateX(-" + currentIndex * cardWidth + "px)"
+            });
+            setActiveClass();
+            hideBtn();
+        }
+
+        function prevSlide(e) {
+            e.preventDefault();
+            if (currentIndex <= 0) {
+                currentIndex = 0;
+                return false;
+            }
+            currentIndex--;
+            sliderTrack.css({
+                transform: "translateX(-" + currentIndex * cardWidth + "px)"
+            });
+            setActiveClass();
+            hideBtn();
+        }
+
+        hideBtn();
+
+        if (windowW <= 980) {
+            resetDimensions();
+            setDimensions();
+            setActiveClass();
+
+            next.click(function (e) {
+                nextSlide(e);
+            });
+            prev.click(function (e) {
+                prevSlide(e);
+            });
+            sliderTrack.on('swipeleft', function (e) {
+                nextSlide(e);
+            });
+            sliderTrack.on('swiperight', function (e) {
+                prevSlide(e);
+            });
+        }
+        else {
+            resetDimensions();
+            sliderTrack.on('swipeleft, swiperight', function (e) {
+                return false;
+            });
+        }
+    }
+
+    var resizeTimer;
+
+    $(window).on('resize', function (e) {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
+        resizeTimer = setTimeout(function () {
             windowAnim();
+            houseSlider();
         }, 200);
     });
 
@@ -109,4 +208,6 @@ jQuery(document).ready(function () {
         jQuery(this).addClass('active');
         jQuery(tabId).fadeIn(600).addClass('active');
     });
+
+    houseSlider();
 });
