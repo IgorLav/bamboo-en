@@ -1,4 +1,5 @@
 jQuery(document).ready(function () {
+    var initialWidth = $(window).width();
     jQuery('a[href="#"]').click(function (e) {
         e.preventDefault();
     });
@@ -50,7 +51,12 @@ jQuery(document).ready(function () {
                 top_of_element = el.offset().top,
                 bottom_of_element = el.offset().top + el.outerHeight(),
                 bottom_of_screen = $(window).scrollTop() + window.innerHeight,
+                videoDelay = 1700,
                 top_of_screen = $(window).scrollTop();
+
+            if($(window).width() <= 980) {
+                videoDelay = 100
+            }
 
             if (runWindowAnim && (bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
                 var video = document.getElementById('videoWindow');
@@ -60,7 +66,7 @@ jQuery(document).ready(function () {
                     setTimeout(function () {
                         replayVideo()
                     }, 8000)
-                }, 700)
+                }, videoDelay)
             }
         });
     }
@@ -89,20 +95,19 @@ jQuery(document).ready(function () {
     }
 
     //mobHousesSlider
-    function houseSlider() {
-        var windowW = $(window).width(),
-            sliderTrack = $('.offer-boxes .inner-container'),
+    function houseSlider(resize) {
+        var windowW = $(window).width();
+
+        if(resize && (windowW === initialWidth)) return false;
+
+        var sliderTrack = $('.offer-boxes .inner-container'),
+            mobView = windowW <= 980,
             card = $('.offer-boxes .card-box'),
             cardWidth = '',
             currentIndex = 0,
             next = $('.next-btn'),
             prev = $('.prev-btn');
 
-        function setDimensions() {
-            cardWidth = card.outerWidth();
-            sliderTrack.outerWidth(cardWidth * card.length);
-            card.outerWidth(cardWidth);
-        }
 
         function resetDimensions() {
             sliderTrack.css('width', '');
@@ -111,6 +116,18 @@ jQuery(document).ready(function () {
                 transform: "none"
             });
             card.removeClass('active');
+        }
+
+        function setDimensions() {
+            card.css({width: ''});
+            sliderTrack.css({width: ''});
+
+            cardWidth = card.outerWidth();
+            sliderTrack.css({
+                width: cardWidth * card.length,
+                transform: "translateX(-" + currentIndex * cardWidth + "px)"
+            });
+            card.css({width: cardWidth});
         }
 
         function setActiveClass() {
@@ -158,7 +175,7 @@ jQuery(document).ready(function () {
 
         hideBtn();
 
-        if (windowW <= 980) {
+        if (mobView) {
             resetDimensions();
             setDimensions();
             setActiveClass();
@@ -175,13 +192,12 @@ jQuery(document).ready(function () {
             sliderTrack.on('swiperight', function (e) {
                 prevSlide(e);
             });
+            return false;
         }
-        else {
-            resetDimensions();
-            sliderTrack.on('swipeleft, swiperight', function (e) {
-                return false;
-            });
-        }
+        resetDimensions();
+        sliderTrack.on('swipeleft, swiperight', function (e) {
+            return false;
+        });
     }
 
     var resizeTimer;
@@ -190,7 +206,7 @@ jQuery(document).ready(function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
             windowAnim();
-            houseSlider();
+            houseSlider('resize');
         }, 200);
     });
 

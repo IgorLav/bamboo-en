@@ -136,8 +136,8 @@
 }
 
 .animated.fadeIn {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
 }
 
 .fadeInLeft {
@@ -158,4 +158,11 @@
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+@media all and (max-width: 980px) {
+  .animated.fadeIn {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+  }
 }

@@ -99,7 +99,7 @@
     margin: 0 auto;
   }
   .flood {
-    margin-bottom: -46px;
+    margin-bottom: -44px;
     svg {
       width: 170px;
     }
@@ -177,6 +177,9 @@
     .house-outline {
       fill: $primary-color;
     }
+    .house-water {
+      fill: #32ABDF;
+    }
     .offer-title {
       color: $primary-color;
     }
@@ -189,15 +192,13 @@
     }
   }
   .house {
-    &-outline {
+    &-outline,
+    &-water {
       fill: #BDBEC0;
       transition: .5s;
     }
     &-fill {
       fill: #FFF;
-    }
-    &-water {
-      fill: #32ABDF;
     }
   }
 }
