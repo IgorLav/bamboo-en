@@ -5,7 +5,7 @@
   padding: 120px 0 100px;
 
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: 66% center;
   background-size: cover;
   .text-wrap {
     display: table-cell;
@@ -13,6 +13,10 @@
   }
   .banner-title {
     font: 700 72px/1 "GalanoGrotesque", sans-serif;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    background-position: center right;
   }
 }
 
@@ -129,7 +133,7 @@
 
 @media all and (max-width: 1370px) {
   .page-banner {
-    height: 340px;
+    height: 289px;
   }
 }
 
