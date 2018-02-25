@@ -29,12 +29,12 @@
         z-index: 1;
       }
     }
-    &.active a {
+    &.active > a {
       color: $primary-color;
     }
-    &.active a:after,
-    a:hover:after,
-    a:focus:after {
+    &.active > a:after,
+    & > a:hover:after,
+    & > a:focus:after {
       -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
       transform: scaleX(1);

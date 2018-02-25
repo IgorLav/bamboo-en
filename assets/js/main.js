@@ -219,10 +219,13 @@ jQuery(document).ready(function () {
 
     //tabs
     var pageHash = window.location.hash;
-    if (pageHash) {
-        jQuery('.page-tabs-nav a, .tab-content').removeClass('active');
+    function hashTabsHandler () {
         jQuery('.page-tabs-nav a[href="'+ pageHash +'"]').addClass('active');
         jQuery(pageHash).fadeIn(600).addClass('active');
+    }
+    if (pageHash) {
+        jQuery('.page-tabs-nav a, .tab-content').removeClass('active');
+        hashTabsHandler();
     }
 
     jQuery('.page-tabs-nav a').click(function (e) {

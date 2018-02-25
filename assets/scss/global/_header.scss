@@ -100,12 +100,13 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: -5px;
       right: 0;
       min-width: 140px;
+      padding: 5px 0;
 
       background-color: #fff;
-      border: 1px solid $dropdown-border-color;
+      //border: 1px solid $dropdown-border-color;
       text-align: left;
 
       -webkit-transform: scaley(0);
@@ -118,11 +119,16 @@
       z-index: 100;
       li {
         padding: 5px;
+        a {
+          &:hover,
+          &:focus {
+            color: $primary-color;
+          }
+        }
       }
     }
     &:hover {
       .dropdown-menu {
-        padding: 5px 0;
         -webkit-transform: scaleY(1);
         -ms-transform: scaleY(1);
         transform: scaleY(1);
@@ -253,6 +259,22 @@
           font-size: 30px;
         }
       }
+      .dropdown-menu {
+        padding-top: 30px;
+        position: relative;
+        background-color: transparent;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        li {
+          margin-bottom: 15px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          font-size: 20px;
+        }
+      }
       .secondary-nav {
         position: relative;
         display: block !important;
@@ -317,6 +339,11 @@
         padding-top: 100px;
         a {
           font-size: 22px;
+        }
+      }
+      .dropdown-menu {
+        a {
+          font-size: 16px;
         }
       }
     }
