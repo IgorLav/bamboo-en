@@ -14,7 +14,6 @@
   .banner-title {
     font: 700 72px/1 "GalanoGrotesque", sans-serif;
   }
-
   @media (min-width: $screen-sm-min) {
     background-position: center right;
   }
@@ -27,6 +26,17 @@
   width: 100%;
   border: 1px solid $tab-border-color;
   .tabs-nav-link {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
     font: 700 24px/1 'GalanoGrotesque', sans-serif;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -35,11 +45,25 @@
     border-right: 1px solid $tab-border-color;
     padding: 25px 5px 23px;
     text-align: center;
-    border-bottom: 4px solid transparent;
     color: $tab-border-color;
 
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: block;
+      -webkit-transition: .35s;
+      transition: .35s;
+      border-bottom: 4px solid transparent;
+      z-index: 1;
+    }
+
     &.active {
-      border-bottom-color: $primary-color;
+      &:after {
+        border-bottom-color: $primary-color;
+      }
     }
     &:hover,
     &:focus,
@@ -51,14 +75,12 @@
     }
   }
 }
-
 .tab-content {
   display: none;
   &.active {
     display: block;
   }
 }
-
 .page-content {
   font: 28px "GalanoGrotesque", sans-serif;
   padding: 80px 0 150px;
@@ -166,7 +188,7 @@
   .page-tabs-nav {
     .tabs-nav-link {
       font-size: 18px;
-      padding: 12px 5px 10px;
+      padding: 12px 5px;
     }
   }
 }
@@ -221,6 +243,10 @@
 }
 
 @media all and (max-width: 390px) {
+  .page-tabs-nav .tabs-nav-link {
+    font-size: 14px;
+  }
+
   .page-content {
     h1,
     h2,
@@ -236,6 +262,9 @@
     }
     blockquote {
       padding-left: 25px;
+    }
+    p {
+      margin-bottom: 30px;
     }
   }
 }

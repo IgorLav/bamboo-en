@@ -25,37 +25,4 @@
       }
     }
   }
-
-  .dropdown {
-    position: relative;
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      border: 1px solid $dropdown-border-color;
-      text-align: left;
-
-      -webkit-transform: scaley(0);
-      -ms-transform: scaley(0);
-      transform: scaley(0);
-
-      -webkit-transition: .3s;
-      -o-transition: .3s;
-      transition: .3s;
-      z-index: 100;
-      li {
-        padding: 5px;
-      }
-    }
-    &:hover {
-      .dropdown-menu {
-        padding: 5px 0;
-        -webkit-transform: scaleY(1);
-        -ms-transform: scaleY(1);
-        transform: scaleY(1);
-      }
-    }
-  }
 }
