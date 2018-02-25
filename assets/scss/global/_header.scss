@@ -277,7 +277,7 @@
       }
       .secondary-nav {
         position: relative;
-        display: block !important;
+        //display: block !important;
         .container {
           padding: 0;
         }
@@ -319,6 +319,10 @@
 
       .dropdown-menu {
         padding-top: 15px;
+
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
