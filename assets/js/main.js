@@ -48,7 +48,7 @@ jQuery(document).ready(function () {
     function windowAnim() {
         var el = $(".feature-section video");
         if (el.length) {
-            $(window).on('scroll ', function () {
+            jQuery(window).on('scroll ', function () {
                 var top_of_element = el.offset().top,
                     bottom_of_element = el.offset().top + el.outerHeight(),
                     bottom_of_screen = $(window).scrollTop() + window.innerHeight,
@@ -98,17 +98,17 @@ jQuery(document).ready(function () {
 
     //mobHousesSlider
     function houseSlider(resize) {
-        var windowW = $(window).width();
+        var windowW = jQuery(window).width();
 
         if (resize && (windowW === initialWidth)) return false;
 
-        var sliderTrack = $('.offer-boxes .inner-container'),
+        var sliderTrack = jQuery('.offer-boxes .inner-container'),
             mobView = windowW <= 980,
-            card = $('.offer-boxes .card-box'),
+            card = jQuery('.offer-boxes .card-box'),
             cardWidth = '',
             currentIndex = 0,
-            next = $('.next-btn'),
-            prev = $('.prev-btn');
+            next = jQuery('.next-btn'),
+            prev = jQuery('.prev-btn');
 
 
         function resetDimensions() {
@@ -203,30 +203,49 @@ jQuery(document).ready(function () {
         });
     }
 
-    var resizeTimer;
-
-    $(window).on('resize', function (e) {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-            windowAnim();
-            houseSlider('resize');
-        }, 200);
-    });
-
     if (jQuery.waypoints) {
         sectionAnim();
     }
 
     //tabs
     var pageHash = window.location.hash;
-    function hashTabsHandler () {
-        jQuery('.page-tabs-nav a[href="'+ pageHash +'"]').addClass('active');
+
+    function scrollToAnchor() {
+        if (pageHash) {
+            jQuery('html,body').animate({
+                scrollTop: 0
+            }, 10);
+        }
+    }
+
+    function hashTabsHandler() {
+        jQuery('.page-tabs-nav a[href="' + pageHash + '"]').addClass('active');
         jQuery(pageHash).fadeIn(600).addClass('active');
     }
+
     if (pageHash) {
         jQuery('.page-tabs-nav a, .tab-content').removeClass('active');
         hashTabsHandler();
     }
+
+    scrollToAnchor();
+
+    jQuery('.main-nav .dropdown-menu a').click(function (e) {
+        var url = $(this).attr('href'),
+            tabHash = url.slice(url.indexOf('#') + 1);
+        var tab = jQuery('#' + tabHash);
+
+        if (tab.length) {
+            jQuery('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+
+            jQuery('.page-tabs-nav a').removeClass('active')
+            jQuery('.tab-content').removeClass('active').hide();
+            tab.fadeIn(600).addClass('active');
+            jQuery("[href=\"#" + tabHash + "\"]").addClass('active');
+        }
+    });
 
     jQuery('.page-tabs-nav a').click(function (e) {
         e.preventDefault();
@@ -237,6 +256,16 @@ jQuery(document).ready(function () {
         jQuery('.tab-content').removeClass('active').hide();
         jQuery(this).addClass('active');
         jQuery(tabId).fadeIn(600).addClass('active');
+    });
+
+    var resizeTimer;
+
+    $(window).on('resize', function (e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            windowAnim();
+            houseSlider('resize');
+        }, 200);
     });
 
     houseSlider();

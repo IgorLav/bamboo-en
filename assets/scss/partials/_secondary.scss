@@ -76,6 +76,7 @@
   }
 }
 .tab-content {
+  position: relative;
   display: none;
   &.active {
     display: block;
