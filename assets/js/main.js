@@ -234,7 +234,7 @@ jQuery(document).ready(function () {
         hashTabsHandler();
     }
 
-    // scrollToAnchor();
+    scrollToAnchor();
 
     jQuery('.main-nav .dropdown-menu a').click(function (e) {
         var url = $(this).attr('href'),
