@@ -208,7 +208,8 @@ jQuery(document).ready(function () {
     }
 
     //tabs
-    var pageHash = window.location.hash;
+    var pageHash = window.location.hash,
+        tabNavLinks = jQuery('.tabs-nav-link');
 
     function scrollToAnchor() {
         if (pageHash) {
@@ -223,8 +224,13 @@ jQuery(document).ready(function () {
         jQuery(pageHash).fadeIn(600).addClass('active');
     }
 
+    function resetTabs() {
+        tabNavLinks.removeClass('active');
+        jQuery('.tab-content').removeClass('active').hide();
+    }
+
     if (pageHash) {
-        jQuery('.page-tabs-nav a, .tab-content').removeClass('active');
+        resetTabs();
         hashTabsHandler();
     }
 
@@ -240,8 +246,7 @@ jQuery(document).ready(function () {
                 scrollTop: 0
             }, 1000);
 
-            jQuery('.page-tabs-nav a').removeClass('active')
-            jQuery('.tab-content').removeClass('active').hide();
+            resetTabs();
             tab.fadeIn(600).addClass('active');
             jQuery("[href=\"#" + tabHash + "\"]").addClass('active');
         }
@@ -252,8 +257,7 @@ jQuery(document).ready(function () {
         var tabId = jQuery(this).attr('href');
         window.location.hash = tabId;
 
-        jQuery('.page-tabs-nav a').removeClass('active');
-        jQuery('.tab-content').removeClass('active').hide();
+        resetTabs();
         jQuery(this).addClass('active');
         jQuery(tabId).fadeIn(600).addClass('active');
     });
