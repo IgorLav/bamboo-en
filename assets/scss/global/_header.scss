@@ -312,8 +312,14 @@
 
 @media all and (max-width: 767px) {
   .wrap {
-    .header:before {
-      height: 100px;
+    .header{
+      &:before {
+        height: 100px;
+      }
+
+      .dropdown-menu {
+        padding-top: 15px;
+      }
     }
   }
 }
