@@ -103,10 +103,11 @@
       left: -5px;
       right: 0;
       min-width: 140px;
-      padding: 5px 0;
+      padding: 8px 5px;
 
       background-color: #fff;
-      //border: 1px solid $dropdown-border-color;
+      border: 1px solid #ededed;
+      box-shadow: 0 0 20px rgba(0, 0, 0, .1);
       text-align: left;
 
       -webkit-transform: scaley(0);

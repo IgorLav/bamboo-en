@@ -289,6 +289,8 @@ body {
         z-index: 1111; }
     .main-nav-item > a {
       padding-bottom: 5px; }
+    .main-nav-item li a {
+      font-size: 1.1em; }
     .main-nav-item.active > a {
       color: #F15C2C; }
     .main-nav-item.active > a:after, .main-nav-item > a:hover:after, .main-nav-item > a:focus:after {
@@ -412,8 +414,10 @@ body {
       left: -5px;
       right: 0;
       min-width: 140px;
-      padding: 5px 0;
+      padding: 8px 5px;
       background-color: #fff;
+      border: 1px solid #ededed;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       text-align: left;
       -webkit-transform: scaley(0);
       -ms-transform: scaley(0);
