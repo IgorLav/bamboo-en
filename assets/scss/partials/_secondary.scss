@@ -17,6 +17,9 @@
   @media (min-width: $screen-sm-min) {
     background-position: center right;
   }
+  @media (min-width: 1580px) {
+    height: 450px;
+  }
 }
 
 .page-tabs-nav {

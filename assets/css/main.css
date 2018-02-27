@@ -1140,6 +1140,9 @@ body {
   @media (min-width: 768px) {
     .page-banner {
       background-position: center right; } }
+  @media (min-width: 1580px) {
+    .page-banner {
+      height: 450px; } }
 
 .page-tabs-nav {
   display: -webkit-box;
